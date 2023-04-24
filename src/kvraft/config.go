@@ -15,6 +15,7 @@ import "6.5840/raft"
 import "fmt"
 import "time"
 import "sync/atomic"
+import "log"
 
 func randstring(n int) string {
 	b := make([]byte, 2*n)
@@ -83,6 +84,7 @@ func (cfg *config) LogSize() int {
 	logsize := 0
 	for i := 0; i < cfg.n; i++ {
 		n := cfg.saved[i].RaftStateSize()
+		log.Printf("rf %d sz %d", i, n)
 		if n > logsize {
 			logsize = n
 		}

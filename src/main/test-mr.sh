@@ -49,7 +49,9 @@ rm -f mr-*
 
 # make sure software is freshly built.
 (cd ../../mrapps && go clean)
+
 (cd .. && go clean)
+
 (cd ../../mrapps && go build $RACE -buildmode=plugin wc.go) || exit 1
 (cd ../../mrapps && go build $RACE -buildmode=plugin indexer.go) || exit 1
 (cd ../../mrapps && go build $RACE -buildmode=plugin mtiming.go) || exit 1

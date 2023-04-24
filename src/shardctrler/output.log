@@ -1,0 +1,1683 @@
+Test: Basic leave/join ...
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+005593 LOG1 state 0 Term 0 | raft[0] election timeout
+005593 LOG1 Term 0 | raft[0] convert from 0 to 1
+005595 LOG1 raft[0] presisiter term1 votefor0 loglen0
+005595 LOG1  term : 1 | raft[0][state : 1] start a election 
+005595 LOG1 vote for self raft[0]
+005595 LOG1 raft[0] sent requestvote to raft[2]
+005596 LOG1 term : 0 | raft[2] accept the requestvote from raft[0]
+005596 LOG1 term : 1 | raft[2] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+005597 LOG1 raft[2] presisiter term1 votefor0 loglen0
+005597 LOG1 Term 1 | raft[0] convert from 1 to 2
+005597 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+005597 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+005599 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+005599 LOG1 raft[2] presisiter term1 votefor0 loglen0
+005599 LOG1 raft[0] sent requestvote to raft[1]
+005600 LOG1 term : 0 | raft[1] accept the requestvote from raft[0]
+005600 LOG1 term : 1 | raft[1] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+005600 LOG1 raft[1] presisiter term1 votefor0 loglen0
+005603 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+005603 LOG1 raft[1] presisiter term1 votefor0 loglen0
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+006054 LOG1 raft[0] presisiter term1 votefor0 loglen1
+006054 LOG1 raft[0] append newlog index:1  term:1 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+006056 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+006056 LOG1 raft[2] append the logs index from 0 to 1
+006057 LOG1 raft[2] presisiter term1 votefor0 loglen1
+006057 LOG1 raft[0] applier start firstIndex 0 commitIndex 1 lastApplied 0
+006057 LOG1 raft[0] applies entries 0-1 in term 1
+006058 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+006058 LOG1 raft[1] append the logs index from 0 to 1
+006059 LOG1 raft[1] presisiter term1 votefor0 loglen1
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+006059 LOG1 raft[0] presisiter term1 votefor0 loglen2
+006059 LOG1 raft[0] append newlog index:2  term:1 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+006060 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+006060 LOG1 raft[2] append the logs index from 1 to 2
+006061 LOG1 raft[2] presisiter term1 votefor0 loglen2
+006061 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+006061 LOG1 raft[1] append the logs index from 1 to 2
+006061 LOG1 raft[2] applier start firstIndex 0 commitIndex 1 lastApplied 0
+006061 LOG1 raft[2] applies entries 0-1 in term 1
+006061 LOG1 raft[0] applier start firstIndex 0 commitIndex 2 lastApplied 1
+006061 LOG1 raft[0] applies entries 1-2 in term 1
+006061 LOG1 raft[1] presisiter term1 votefor0 loglen2
+006062 LOG1 raft[1] applier start firstIndex 0 commitIndex 1 lastApplied 0
+006062 LOG1 raft[1] applies entries 0-1 in term 1
+ctrler accept a command &{map[1:[x y z]] [] 0 0 0 Join 1044096668270516178 0}
+006063 LOG1 raft[0] presisiter term1 votefor0 loglen3
+006063 LOG1 raft[0] append newlog index:3  term:1 | command : {Join 1044096668270516178 0 map[1:[x y z]] [] 0 0 0}
+006064 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+006065 LOG1 raft[2] append the logs index from 2 to 3
+006065 LOG1 raft[2] presisiter term1 votefor0 loglen3
+006065 LOG1 raft[0] applier start firstIndex 0 commitIndex 3 lastApplied 2
+006065 LOG1 raft[0] applies entries 2-3 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+006067 LOG1 raft[0] presisiter term1 votefor0 loglen4
+006067 LOG1 raft[0] append newlog index:4  term:1 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+006068 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+006068 LOG1 raft[2] append the logs index from 3 to 4
+006069 LOG1 raft[2] presisiter term1 votefor0 loglen4
+006069 LOG1 raft[0] applier start firstIndex 0 commitIndex 4 lastApplied 3
+006069 LOG1 raft[0] applies entries 3-4 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+006071 LOG1 raft[0] presisiter term1 votefor0 loglen5
+006071 LOG1 raft[0] append newlog index:5  term:1 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+006072 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+006072 LOG1 raft[2] append the logs index from 4 to 5
+006072 LOG1 raft[2] presisiter term1 votefor0 loglen5
+006073 LOG1 raft[0] applier start firstIndex 0 commitIndex 5 lastApplied 4
+006073 LOG1 raft[0] applies entries 4-5 in term 1
+ctrler accept a command &{map[2:[a b c]] [] 0 0 0 Join 1044096668270516178 0}
+006074 LOG1 raft[0] presisiter term1 votefor0 loglen6
+006074 LOG1 raft[0] append newlog index:6  term:1 | command : {Join 1044096668270516178 0 map[2:[a b c]] [] 0 0 0}
+006075 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+006076 LOG1 raft[2] append the logs index from 5 to 6
+006076 LOG1 raft[2] presisiter term1 votefor0 loglen6
+006076 LOG1 raft[0] applier start firstIndex 0 commitIndex 6 lastApplied 5
+006076 LOG1 raft[0] applies entries 5-6 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+006078 LOG1 raft[0] presisiter term1 votefor0 loglen7
+006078 LOG1 raft[0] append newlog index:7  term:1 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+006079 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+006079 LOG1 raft[2] append the logs index from 6 to 7
+006080 LOG1 raft[2] presisiter term1 votefor0 loglen7
+006080 LOG1 raft[0] applier start firstIndex 0 commitIndex 7 lastApplied 6
+006080 LOG1 raft[0] applies entries 6-7 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+006082 LOG1 raft[0] presisiter term1 votefor0 loglen8
+006082 LOG1 raft[0] append newlog index:8  term:1 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+006083 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+006083 LOG1 raft[2] append the logs index from 7 to 8
+006083 LOG1 raft[2] presisiter term1 votefor0 loglen8
+006084 LOG1 raft[0] applier start firstIndex 0 commitIndex 8 lastApplied 7
+006084 LOG1 raft[0] applies entries 7-8 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+006086 LOG1 raft[0] presisiter term1 votefor0 loglen9
+006086 LOG1 raft[0] append newlog index:9  term:1 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+006087 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+006087 LOG1 raft[2] append the logs index from 8 to 9
+006087 LOG1 raft[2] presisiter term1 votefor0 loglen9
+006088 LOG1 raft[0] applier start firstIndex 0 commitIndex 9 lastApplied 8
+006088 LOG1 raft[0] applies entries 8-9 in term 1
+ctrler accept a command &{map[] [1] 0 0 0 Leave 1044096668270516178 0}
+006089 LOG1 raft[0] presisiter term1 votefor0 loglen10
+006089 LOG1 raft[0] append newlog index:10  term:1 | command : {Leave 1044096668270516178 0 map[] [1] 0 0 0}
+006091 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+006091 LOG1 raft[2] append the logs index from 9 to 10
+006093 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+006093 LOG1 raft[1] append the logs index from 2 to 10
+006094 LOG1 raft[1] presisiter term1 votefor0 loglen10
+006094 LOG1 raft[0] applier start firstIndex 0 commitIndex 10 lastApplied 9
+006094 LOG1 raft[0] applies entries 9-10 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+006097 LOG1 raft[0] presisiter term1 votefor0 loglen11
+006097 LOG1 raft[0] append newlog index:11  term:1 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+006098 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+006098 LOG1 raft[1] append the logs index from 10 to 11
+006099 LOG1 raft[1] presisiter term1 votefor0 loglen11
+006099 LOG1 raft[0] applier start firstIndex 0 commitIndex 11 lastApplied 10
+006099 LOG1 raft[0] applies entries 10-11 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+006101 LOG1 raft[0] presisiter term1 votefor0 loglen12
+006101 LOG1 raft[0] append newlog index:12  term:1 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+006102 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+006102 LOG1 raft[1] append the logs index from 11 to 12
+006102 LOG1 raft[1] presisiter term1 votefor0 loglen12
+006103 LOG1 raft[0] applier start firstIndex 0 commitIndex 12 lastApplied 11
+006103 LOG1 raft[0] applies entries 11-12 in term 1
+ctrler accept a command &{map[] [2] 0 0 0 Leave 1044096668270516178 0}
+006105 LOG1 raft[0] presisiter term1 votefor0 loglen13
+006105 LOG1 raft[0] append newlog index:13  term:1 | command : {Leave 1044096668270516178 0 map[] [2] 0 0 0}
+006106 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+006106 LOG1 raft[1] append the logs index from 12 to 13
+006106 LOG1 raft[1] presisiter term1 votefor0 loglen13
+006107 LOG1 raft[0] applier start firstIndex 0 commitIndex 13 lastApplied 12
+006107 LOG1 raft[0] applies entries 12-13 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+006109 LOG1 raft[0] presisiter term1 votefor0 loglen14
+006109 LOG1 raft[0] append newlog index:14  term:1 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+006109 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+006110 LOG1 raft[1] append the logs index from 13 to 14
+006110 LOG1 raft[1] presisiter term1 votefor0 loglen14
+006110 LOG1 raft[0] applier start firstIndex 0 commitIndex 14 lastApplied 13
+006111 LOG1 raft[0] applies entries 13-14 in term 1
+  ... Passed
+Test: Historical queries ...
+006111 LOG1 raft[1] applier start firstIndex 0 commitIndex 13 lastApplied 1
+006112 LOG1 raft[1] applies entries 1-13 in term 1
+006112 LOG1 raft[2] presisiter term1 votefor0 loglen10
+006112 LOG1 raft[2] applier start firstIndex 0 commitIndex 9 lastApplied 1
+006112 LOG1 raft[2] applies entries 1-9 in term 1
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+008598 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+015571 LOG1 state 0 Term 1 | raft[1] election timeout
+015571 LOG1 Term 1 | raft[1] convert from 0 to 1
+015572 LOG1 raft[1] presisiter term2 votefor1 loglen14
+015573 LOG1  term : 2 | raft[1][state : 1] start a election 
+015573 LOG1 vote for self raft[1]
+015573 LOG1 raft[1] sent requestvote to raft[2]
+015573 LOG1 raft[1] sent requestvote to raft[0]
+015574 LOG1 term : 1 | raft[2] accept the requestvote from raft[1]
+015574 LOG1 term : 2 | raft[2] (lastlogterm 1 lastlogindex 10)accept the requestvote from raft[8] (lastlogterm 1 lastlogindex 14) 
+015575 LOG1 raft[2] presisiter term2 votefor1 loglen10
+015575 LOG1 Term 2 | raft[1] convert from 1 to 2
+015575 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+015575 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+015576 LOG1 term : 2 | raft[2] accept the heartbeat from raft[1]
+015577 LOG1 raft[2] presisiter term2 votefor1 loglen10
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+016694 LOG1 raft[1] presisiter term2 votefor1 loglen15
+016694 LOG1 raft[1] append newlog index:15  term:2 | command : {Query 1044096668270516178 0 map[] [] 0 0 0}
+016696 LOG1 term : 2 | raft[2] accept the appendentry from raft[1]
+016696 LOG1 raft[2] append the logs index from 10 to 15
+016697 LOG1 raft[2] presisiter term2 votefor1 loglen15
+016697 LOG1 raft[2] applier start firstIndex 0 commitIndex 13 lastApplied 9
+016697 LOG1 raft[1] applier start firstIndex 0 commitIndex 15 lastApplied 13
+016698 LOG1 raft[2] applies entries 9-13 in term 2
+016698 LOG1 raft[1] applies entries 13-15 in term 2
+ctrler accept a command &{map[] [] 0 0 1 Query 1044096668270516178 0}
+016852 LOG1 raft[1] presisiter term2 votefor1 loglen16
+016852 LOG1 raft[1] append newlog index:16  term:2 | command : {Query 1044096668270516178 0 map[] [] 0 0 1}
+016854 LOG1 term : 2 | raft[2] accept the appendentry from raft[1]
+016854 LOG1 raft[2] append the logs index from 15 to 16
+016854 LOG1 raft[2] presisiter term2 votefor1 loglen16
+016855 LOG1 raft[2] applier start firstIndex 0 commitIndex 15 lastApplied 13
+016855 LOG1 raft[2] applies entries 13-15 in term 2
+016855 LOG1 raft[1] applier start firstIndex 0 commitIndex 16 lastApplied 15
+016855 LOG1 raft[1] applies entries 15-16 in term 2
+ctrler accept a command &{map[] [] 0 0 2 Query 1044096668270516178 0}
+017590 LOG1 raft[1] presisiter term2 votefor1 loglen17
+017590 LOG1 raft[1] append newlog index:17  term:2 | command : {Query 1044096668270516178 0 map[] [] 0 0 2}
+017591 LOG1 term : 2 | raft[2] accept the appendentry from raft[1]
+017592 LOG1 raft[2] append the logs index from 16 to 17
+017592 LOG1 raft[2] presisiter term2 votefor1 loglen17
+017593 LOG1 raft[1] applier start firstIndex 0 commitIndex 17 lastApplied 16
+017593 LOG1 raft[1] applies entries 16-17 in term 2
+017594 LOG1 raft[2] applier start firstIndex 0 commitIndex 16 lastApplied 15
+017595 LOG1 raft[2] applies entries 15-16 in term 2
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+018508 LOG1 raft[1] presisiter term2 votefor1 loglen18
+018508 LOG1 raft[1] append newlog index:18  term:2 | command : {Query 1044096668270516178 0 map[] [] 0 0 0}
+018510 LOG1 term : 2 | raft[2] accept the appendentry from raft[1]
+018510 LOG1 raft[2] append the logs index from 17 to 18
+018510 LOG1 raft[2] presisiter term2 votefor1 loglen18
+018511 LOG1 raft[2] applier start firstIndex 0 commitIndex 17 lastApplied 16
+018511 LOG1 raft[2] applies entries 16-17 in term 2
+018511 LOG1 raft[1] applier start firstIndex 0 commitIndex 18 lastApplied 17
+018511 LOG1 raft[1] applies entries 17-18 in term 2
+018576 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+018577 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+018577 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+018579 LOG1 term : 2 | raft[2] accept the heartbeat from raft[1]
+018580 LOG1 raft[2] presisiter term2 votefor1 loglen18
+018580 LOG1 raft[2] applier start firstIndex 0 commitIndex 18 lastApplied 17
+018581 LOG1 raft[2] applies entries 17-18 in term 2
+ctrler accept a command &{map[] [] 0 0 3 Query 1044096668270516178 0}
+018826 LOG1 raft[1] presisiter term2 votefor1 loglen19
+018826 LOG1 raft[1] append newlog index:19  term:2 | command : {Query 1044096668270516178 0 map[] [] 0 0 3}
+018828 LOG1 term : 2 | raft[2] accept the appendentry from raft[1]
+018828 LOG1 raft[2] append the logs index from 18 to 19
+018829 LOG1 raft[2] presisiter term2 votefor1 loglen19
+018829 LOG1 raft[1] applier start firstIndex 0 commitIndex 19 lastApplied 18
+018830 LOG1 raft[1] applies entries 18-19 in term 2
+ctrler accept a command &{map[] [] 0 0 4 Query 1044096668270516178 0}
+018945 LOG1 raft[1] presisiter term2 votefor1 loglen20
+018945 LOG1 raft[1] append newlog index:20  term:2 | command : {Query 1044096668270516178 0 map[] [] 0 0 4}
+018947 LOG1 term : 2 | raft[2] accept the appendentry from raft[1]
+018947 LOG1 raft[2] append the logs index from 19 to 20
+018948 LOG1 raft[2] presisiter term2 votefor1 loglen20
+018948 LOG1 raft[1] applier start firstIndex 0 commitIndex 20 lastApplied 19
+018948 LOG1 raft[2] applier start firstIndex 0 commitIndex 19 lastApplied 18
+018948 LOG1 raft[2] applies entries 18-19 in term 2
+018948 LOG1 raft[1] applies entries 19-20 in term 2
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+021578 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+025110 LOG1 state 0 Term 1 | raft[0] election timeout
+025110 LOG1 Term 1 | raft[0] convert from 0 to 1
+025112 LOG1 raft[0] presisiter term2 votefor0 loglen14
+025112 LOG1  term : 2 | raft[0][state : 1] start a election 
+025112 LOG1 vote for self raft[0]
+025112 LOG1 raft[0] sent requestvote to raft[2]
+025112 LOG1 raft[0] sent requestvote to raft[1]
+025113 LOG1 term : 2 | raft[2] accept the requestvote from raft[0]
+025114 LOG1 raft[2] presisiter term2 votefor1 loglen20
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+027308 LOG1 state 0 Term 2 | raft[2] election timeout
+027308 LOG1 Term 2 | raft[2] convert from 0 to 1
+027310 LOG1 raft[2] presisiter term3 votefor2 loglen20
+027310 LOG1  term : 3 | raft[2][state : 1] start a election 
+027310 LOG1 vote for self raft[2]
+027310 LOG1 raft[2] sent requestvote to raft[1]
+027310 LOG1 raft[2] sent requestvote to raft[0]
+027316 LOG1 term : 2 | raft[0] accept the requestvote from raft[2]
+027316 LOG1 Term 2 | raft[0] convert from 1 to 0
+027317 LOG1 term : 3 | raft[0] (lastlogterm 1 lastlogindex 14)accept the requestvote from raft[8] (lastlogterm 2 lastlogindex 20) 
+027319 LOG1 raft[0] presisiter term3 votefor2 loglen14
+027321 LOG1 Term 3 | raft[2] convert from 1 to 2
+027321 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[0]
+027321 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[1]
+027322 LOG1 term : 3 | raft[0] accept the heartbeat from raft[2]
+027323 LOG1 raft[0] presisiter term3 votefor2 loglen14
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+028402 LOG1 raft[2] presisiter term3 votefor2 loglen21
+028402 LOG1 raft[2] append newlog index:21  term:3 | command : {Query 1044096668270516178 0 map[] [] 0 0 0}
+028404 LOG1 term : 3 | raft[0] accept the appendentry from raft[2]
+028404 LOG1 raft[0] append the logs index from 14 to 21
+028405 LOG1 raft[0] presisiter term3 votefor2 loglen21
+028405 LOG1 raft[2] applier start firstIndex 0 commitIndex 21 lastApplied 19
+ctrler accept a command &{map[] [] 0 0 1 Query 1044096668270516178 0}
+028408 LOG1 raft[0] applier start firstIndex 0 commitIndex 19 lastApplied 0
+028408 LOG1 raft[0] applies entries 0-19 in term 3
+028408 LOG1 raft[2] applies entries 19-21 in term 3
+ctrler accept a command &{map[] [] 0 0 1 Query 1044096668270516178 0}
+028442 LOG1 raft[2] presisiter term3 votefor2 loglen22
+028442 LOG1 raft[2] append newlog index:22  term:3 | command : {Query 1044096668270516178 0 map[] [] 0 0 1}
+028443 LOG1 term : 3 | raft[0] accept the appendentry from raft[2]
+028444 LOG1 raft[0] append the logs index from 21 to 22
+028444 LOG1 raft[0] presisiter term3 votefor2 loglen22
+028444 LOG1 raft[2] applier start firstIndex 0 commitIndex 22 lastApplied 21
+028445 LOG1 raft[2] applies entries 21-22 in term 3
+ctrler accept a command &{map[] [] 0 0 2 Query 1044096668270516178 0}
+028447 LOG1 raft[0] applier start firstIndex 0 commitIndex 21 lastApplied 19
+028447 LOG1 raft[0] applies entries 19-21 in term 3
+ctrler accept a command &{map[] [] 0 0 2 Query 1044096668270516178 0}
+028841 LOG1 raft[2] presisiter term3 votefor2 loglen23
+028841 LOG1 raft[2] append newlog index:23  term:3 | command : {Query 1044096668270516178 0 map[] [] 0 0 2}
+028842 LOG1 term : 3 | raft[0] accept the appendentry from raft[2]
+028843 LOG1 raft[0] append the logs index from 22 to 23
+028843 LOG1 raft[0] presisiter term3 votefor2 loglen23
+028843 LOG1 raft[0] applier start firstIndex 0 commitIndex 22 lastApplied 21
+028844 LOG1 raft[0] applies entries 21-22 in term 3
+028844 LOG1 raft[2] applier start firstIndex 0 commitIndex 23 lastApplied 22
+028844 LOG1 raft[2] applies entries 22-23 in term 3
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+029680 LOG1 raft[2] presisiter term3 votefor2 loglen24
+029680 LOG1 raft[2] append newlog index:24  term:3 | command : {Query 1044096668270516178 0 map[] [] 0 0 0}
+029681 LOG1 term : 3 | raft[0] accept the appendentry from raft[2]
+029681 LOG1 raft[0] append the logs index from 23 to 24
+029682 LOG1 raft[0] presisiter term3 votefor2 loglen24
+029682 LOG1 raft[2] applier start firstIndex 0 commitIndex 24 lastApplied 23
+029683 LOG1 raft[2] applies entries 23-24 in term 3
+ctrler accept a command &{map[] [] 0 0 3 Query 1044096668270516178 0}
+029685 LOG1 raft[0] applier start firstIndex 0 commitIndex 23 lastApplied 22
+029685 LOG1 raft[0] applies entries 22-23 in term 3
+ctrler accept a command &{map[] [] 0 0 3 Query 1044096668270516178 0}
+029838 LOG1 raft[2] presisiter term3 votefor2 loglen25
+029838 LOG1 raft[2] append newlog index:25  term:3 | command : {Query 1044096668270516178 0 map[] [] 0 0 3}
+029839 LOG1 term : 3 | raft[0] accept the appendentry from raft[2]
+029839 LOG1 raft[0] append the logs index from 24 to 25
+029840 LOG1 raft[0] presisiter term3 votefor2 loglen25
+029840 LOG1 raft[2] applier start firstIndex 0 commitIndex 25 lastApplied 24
+029840 LOG1 raft[2] applies entries 24-25 in term 3
+ctrler accept a command &{map[] [] 0 0 4 Query 1044096668270516178 0}
+029842 LOG1 raft[0] applier start firstIndex 0 commitIndex 24 lastApplied 23
+029842 LOG1 raft[0] applies entries 23-24 in term 3
+ctrler accept a command &{map[] [] 0 0 4 Query 1044096668270516178 0}
+030006 LOG1 raft[2] presisiter term3 votefor2 loglen26
+030006 LOG1 raft[2] append newlog index:26  term:3 | command : {Query 1044096668270516178 0 map[] [] 0 0 4}
+030008 LOG1 term : 3 | raft[0] accept the appendentry from raft[2]
+030008 LOG1 raft[0] append the logs index from 25 to 26
+030009 LOG1 raft[0] presisiter term3 votefor2 loglen26
+030009 LOG1 raft[0] applier start firstIndex 0 commitIndex 25 lastApplied 24
+030010 LOG1 raft[0] applies entries 24-25 in term 3
+030010 LOG1 raft[2] applier start firstIndex 0 commitIndex 26 lastApplied 25
+030010 LOG1 raft[2] applies entries 25-26 in term 3
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+030322 LOG1 Term 3 state : 2 | raft[2] heartbeat timeout
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+038323 LOG1 state 0 Term 2 | raft[1] election timeout
+038323 LOG1 Term 2 | raft[1] convert from 0 to 1
+038325 LOG1 raft[1] presisiter term3 votefor1 loglen20
+038326 LOG1  term : 3 | raft[1][state : 1] start a election 
+038326 LOG1 vote for self raft[1]
+038326 LOG1 raft[1] sent requestvote to raft[2]
+038326 LOG1 raft[1] sent requestvote to raft[0]
+038328 LOG1 term : 3 | raft[0] accept the requestvote from raft[1]
+038328 LOG1 raft[0] presisiter term3 votefor2 loglen26
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+039939 LOG1 state 0 Term 3 | raft[0] election timeout
+039939 LOG1 Term 3 | raft[0] convert from 0 to 1
+039941 LOG1 raft[0] presisiter term4 votefor0 loglen26
+039941 LOG1  term : 4 | raft[0][state : 1] start a election 
+039941 LOG1 vote for self raft[0]
+039941 LOG1 raft[0] sent requestvote to raft[2]
+039941 LOG1 raft[0] sent requestvote to raft[1]
+039943 LOG1 term : 3 | raft[1] accept the requestvote from raft[0]
+039943 LOG1 Term 3 | raft[1] convert from 1 to 0
+039943 LOG1 term : 4 | raft[1] (lastlogterm 2 lastlogindex 20)accept the requestvote from raft[8] (lastlogterm 3 lastlogindex 26) 
+039944 LOG1 raft[1] presisiter term4 votefor0 loglen20
+039945 LOG1 Term 4 | raft[0] convert from 1 to 2
+039945 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+039945 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+039946 LOG1 term : 4 | raft[1] accept the heartbeat from raft[0]
+039946 LOG1 raft[1] presisiter term4 votefor0 loglen20
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+040539 LOG1 raft[0] presisiter term4 votefor0 loglen27
+040539 LOG1 raft[0] append newlog index:27  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 0}
+040541 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040541 LOG1 raft[1] append the logs index from 20 to 27
+040542 LOG1 raft[1] presisiter term4 votefor0 loglen27
+040543 LOG1 raft[0] applier start firstIndex 0 commitIndex 27 lastApplied 25
+ctrler accept a command &{map[] [] 0 0 1 Query 1044096668270516178 0}
+040545 LOG1 raft[0] presisiter term4 votefor0 loglen28
+040545 LOG1 raft[0] append newlog index:28  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 1}
+040546 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040546 LOG1 raft[1] append the logs index from 27 to 28
+040547 LOG1 raft[1] presisiter term4 votefor0 loglen28
+040547 LOG1 raft[1] applier start firstIndex 0 commitIndex 27 lastApplied 0
+040547 LOG1 raft[0] applies entries 25-27 in term 4
+040548 LOG1 raft[1] applies entries 0-27 in term 4
+040548 LOG1 raft[0] applier start firstIndex 0 commitIndex 28 lastApplied 27
+040548 LOG1 raft[0] applies entries 27-28 in term 4
+ctrler accept a command &{map[] [] 0 0 2 Query 1044096668270516178 0}
+040550 LOG1 raft[0] presisiter term4 votefor0 loglen29
+040550 LOG1 raft[0] append newlog index:29  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 2}
+040551 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040552 LOG1 raft[1] append the logs index from 28 to 29
+040552 LOG1 raft[1] presisiter term4 votefor0 loglen29
+040553 LOG1 raft[0] applier start firstIndex 0 commitIndex 29 lastApplied 28
+040553 LOG1 raft[0] applies entries 28-29 in term 4
+040553 LOG1 raft[1] applier start firstIndex 0 commitIndex 28 lastApplied 27
+040553 LOG1 raft[1] applies entries 27-28 in term 4
+ctrler accept a command &{map[] [] 0 0 0 Query 1044096668270516178 0}
+040555 LOG1 raft[0] presisiter term4 votefor0 loglen30
+040555 LOG1 raft[0] append newlog index:30  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 0}
+040556 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040556 LOG1 raft[1] append the logs index from 29 to 30
+040556 LOG1 raft[1] presisiter term4 votefor0 loglen30
+040557 LOG1 raft[1] applier start firstIndex 0 commitIndex 29 lastApplied 28
+040557 LOG1 raft[1] applies entries 28-29 in term 4
+040557 LOG1 raft[0] applier start firstIndex 0 commitIndex 30 lastApplied 29
+040557 LOG1 raft[0] applies entries 29-30 in term 4
+ctrler accept a command &{map[] [] 0 0 3 Query 1044096668270516178 0}
+040560 LOG1 raft[0] presisiter term4 votefor0 loglen31
+040560 LOG1 raft[0] append newlog index:31  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 3}
+040561 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040561 LOG1 raft[1] append the logs index from 30 to 31
+040561 LOG1 raft[1] presisiter term4 votefor0 loglen31
+040562 LOG1 raft[1] applier start firstIndex 0 commitIndex 30 lastApplied 29
+040562 LOG1 raft[1] applies entries 29-30 in term 4
+040562 LOG1 raft[0] applier start firstIndex 0 commitIndex 31 lastApplied 30
+040562 LOG1 raft[0] applies entries 30-31 in term 4
+ctrler accept a command &{map[] [] 0 0 4 Query 1044096668270516178 0}
+040565 LOG1 raft[0] presisiter term4 votefor0 loglen32
+040565 LOG1 raft[0] append newlog index:32  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 4}
+040566 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040566 LOG1 raft[1] append the logs index from 31 to 32
+040567 LOG1 raft[1] presisiter term4 votefor0 loglen32
+040567 LOG1 raft[0] applier start firstIndex 0 commitIndex 32 lastApplied 31
+040568 LOG1 raft[0] applies entries 31-32 in term 4
+040568 LOG1 raft[1] applier start firstIndex 0 commitIndex 31 lastApplied 30
+040568 LOG1 raft[1] applies entries 30-31 in term 4
+  ... Passed
+Test: Move ...
+ctrler accept a command &{map[503:[3a 3b 3c]] [] 0 0 0 Join 1044096668270516178 0}
+040572 LOG1 raft[0] presisiter term4 votefor0 loglen33
+040572 LOG1 raft[0] append newlog index:33  term:4 | command : {Join 1044096668270516178 0 map[503:[3a 3b 3c]] [] 0 0 0}
+040573 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040573 LOG1 raft[1] append the logs index from 32 to 33
+040574 LOG1 raft[1] presisiter term4 votefor0 loglen33
+040574 LOG1 raft[0] applier start firstIndex 0 commitIndex 33 lastApplied 32
+040574 LOG1 raft[0] applies entries 32-33 in term 4
+ctrler accept a command &{map[504:[4a 4b 4c]] [] 0 0 0 Join 1044096668270516178 0}
+040577 LOG1 raft[0] presisiter term4 votefor0 loglen34
+040577 LOG1 raft[0] append newlog index:34  term:4 | command : {Join 1044096668270516178 0 map[504:[4a 4b 4c]] [] 0 0 0}
+040578 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040578 LOG1 raft[1] append the logs index from 33 to 34
+040578 LOG1 raft[1] presisiter term4 votefor0 loglen34
+040579 LOG1 raft[0] applier start firstIndex 0 commitIndex 34 lastApplied 33
+040579 LOG1 raft[0] applies entries 33-34 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040580 LOG1 raft[0] presisiter term4 votefor0 loglen35
+040580 LOG1 raft[0] append newlog index:35  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040581 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040581 LOG1 raft[1] append the logs index from 34 to 35
+040582 LOG1 raft[1] presisiter term4 votefor0 loglen35
+040582 LOG1 raft[0] applier start firstIndex 0 commitIndex 35 lastApplied 34
+040582 LOG1 raft[0] applies entries 34-35 in term 4
+ctrler accept a command &{map[] [] 0 503 0 Move 1044096668270516178 0}
+040584 LOG1 raft[0] presisiter term4 votefor0 loglen36
+040584 LOG1 raft[0] append newlog index:36  term:4 | command : {Move 1044096668270516178 0 map[] [] 0 503 0}
+040585 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040585 LOG1 raft[1] append the logs index from 35 to 36
+040586 LOG1 raft[1] presisiter term4 votefor0 loglen36
+040586 LOG1 raft[0] applier start firstIndex 0 commitIndex 36 lastApplied 35
+040586 LOG1 raft[0] applies entries 35-36 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040588 LOG1 raft[0] presisiter term4 votefor0 loglen37
+040588 LOG1 raft[0] append newlog index:37  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040589 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040589 LOG1 raft[1] append the logs index from 36 to 37
+040590 LOG1 raft[1] presisiter term4 votefor0 loglen37
+040590 LOG1 raft[0] applier start firstIndex 0 commitIndex 37 lastApplied 36
+040591 LOG1 raft[0] applies entries 36-37 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040592 LOG1 raft[0] presisiter term4 votefor0 loglen38
+040592 LOG1 raft[0] append newlog index:38  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040593 LOG1 raft[1] applier start firstIndex 0 commitIndex 36 lastApplied 31
+040594 LOG1 raft[1] applies entries 31-36 in term 4
+040594 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040594 LOG1 raft[1] append the logs index from 37 to 38
+040595 LOG1 raft[1] presisiter term4 votefor0 loglen38
+040595 LOG1 raft[0] applier start firstIndex 0 commitIndex 38 lastApplied 37
+040596 LOG1 raft[0] applies entries 37-38 in term 4
+ctrler accept a command &{map[] [] 1 503 0 Move 1044096668270516178 0}
+040598 LOG1 raft[0] presisiter term4 votefor0 loglen39
+040598 LOG1 raft[0] append newlog index:39  term:4 | command : {Move 1044096668270516178 0 map[] [] 1 503 0}
+040599 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040599 LOG1 raft[1] append the logs index from 38 to 39
+040600 LOG1 raft[1] presisiter term4 votefor0 loglen39
+040600 LOG1 raft[0] applier start firstIndex 0 commitIndex 39 lastApplied 38
+040600 LOG1 raft[0] applies entries 38-39 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040602 LOG1 raft[0] presisiter term4 votefor0 loglen40
+040603 LOG1 raft[0] append newlog index:40  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040604 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040604 LOG1 raft[1] append the logs index from 39 to 40
+040605 LOG1 raft[1] presisiter term4 votefor0 loglen40
+040605 LOG1 raft[0] applier start firstIndex 0 commitIndex 40 lastApplied 39
+040605 LOG1 raft[0] applies entries 39-40 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040607 LOG1 raft[0] presisiter term4 votefor0 loglen41
+040607 LOG1 raft[0] append newlog index:41  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040608 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040609 LOG1 raft[1] append the logs index from 40 to 41
+040610 LOG1 raft[1] presisiter term4 votefor0 loglen41
+040610 LOG1 raft[0] applier start firstIndex 0 commitIndex 41 lastApplied 40
+040610 LOG1 raft[0] applies entries 40-41 in term 4
+040610 LOG1 raft[1] applier start firstIndex 0 commitIndex 40 lastApplied 36
+040611 LOG1 raft[1] applies entries 36-40 in term 4
+ctrler accept a command &{map[] [] 2 503 0 Move 1044096668270516178 0}
+040613 LOG1 raft[0] presisiter term4 votefor0 loglen42
+040613 LOG1 raft[0] append newlog index:42  term:4 | command : {Move 1044096668270516178 0 map[] [] 2 503 0}
+040614 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040614 LOG1 raft[1] append the logs index from 41 to 42
+040615 LOG1 raft[1] presisiter term4 votefor0 loglen42
+040616 LOG1 raft[0] applier start firstIndex 0 commitIndex 42 lastApplied 41
+040616 LOG1 raft[0] applies entries 41-42 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040619 LOG1 raft[0] presisiter term4 votefor0 loglen43
+040619 LOG1 raft[0] append newlog index:43  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040616 LOG1 raft[1] applier start firstIndex 0 commitIndex 41 lastApplied 40
+040620 LOG1 raft[1] applies entries 40-41 in term 4
+040620 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040621 LOG1 raft[1] append the logs index from 42 to 43
+040622 LOG1 raft[1] presisiter term4 votefor0 loglen43
+040622 LOG1 raft[1] applier start firstIndex 0 commitIndex 42 lastApplied 41
+040623 LOG1 raft[1] applies entries 41-42 in term 4
+040623 LOG1 raft[0] applier start firstIndex 0 commitIndex 43 lastApplied 42
+040623 LOG1 raft[0] applies entries 42-43 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040625 LOG1 raft[0] presisiter term4 votefor0 loglen44
+040625 LOG1 raft[0] append newlog index:44  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040627 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040627 LOG1 raft[1] append the logs index from 43 to 44
+040628 LOG1 raft[1] presisiter term4 votefor0 loglen44
+040628 LOG1 raft[0] applier start firstIndex 0 commitIndex 44 lastApplied 43
+040629 LOG1 raft[0] applies entries 43-44 in term 4
+040629 LOG1 raft[1] applier start firstIndex 0 commitIndex 43 lastApplied 42
+040629 LOG1 raft[1] applies entries 42-43 in term 4
+ctrler accept a command &{map[] [] 3 503 0 Move 1044096668270516178 0}
+040631 LOG1 raft[0] presisiter term4 votefor0 loglen45
+040631 LOG1 raft[0] append newlog index:45  term:4 | command : {Move 1044096668270516178 0 map[] [] 3 503 0}
+040632 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040632 LOG1 raft[1] append the logs index from 44 to 45
+040633 LOG1 raft[1] presisiter term4 votefor0 loglen45
+040633 LOG1 raft[1] applier start firstIndex 0 commitIndex 44 lastApplied 43
+040633 LOG1 raft[1] applies entries 43-44 in term 4
+040634 LOG1 raft[0] applier start firstIndex 0 commitIndex 45 lastApplied 44
+040634 LOG1 raft[0] applies entries 44-45 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040636 LOG1 raft[0] presisiter term4 votefor0 loglen46
+040636 LOG1 raft[0] append newlog index:46  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040637 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040637 LOG1 raft[1] append the logs index from 45 to 46
+040638 LOG1 raft[1] presisiter term4 votefor0 loglen46
+040638 LOG1 raft[1] applier start firstIndex 0 commitIndex 45 lastApplied 44
+040638 LOG1 raft[1] applies entries 44-45 in term 4
+040638 LOG1 raft[0] applier start firstIndex 0 commitIndex 46 lastApplied 45
+040638 LOG1 raft[0] applies entries 45-46 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040641 LOG1 raft[0] presisiter term4 votefor0 loglen47
+040641 LOG1 raft[0] append newlog index:47  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040642 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040645 LOG1 raft[1] append the logs index from 46 to 47
+040647 LOG1 raft[1] presisiter term4 votefor0 loglen47
+040648 LOG1 raft[0] applier start firstIndex 0 commitIndex 47 lastApplied 46
+040648 LOG1 raft[0] applies entries 46-47 in term 4
+ctrler accept a command &{map[] [] 4 503 0 Move 1044096668270516178 0}
+040653 LOG1 raft[1] applier start firstIndex 0 commitIndex 46 lastApplied 45
+040653 LOG1 raft[1] applies entries 45-46 in term 4
+040653 LOG1 raft[0] presisiter term4 votefor0 loglen48
+040653 LOG1 raft[0] append newlog index:48  term:4 | command : {Move 1044096668270516178 0 map[] [] 4 503 0}
+040654 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040654 LOG1 raft[1] append the logs index from 47 to 48
+040655 LOG1 raft[1] presisiter term4 votefor0 loglen48
+040655 LOG1 raft[0] applier start firstIndex 0 commitIndex 48 lastApplied 47
+040655 LOG1 raft[0] applies entries 47-48 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040657 LOG1 raft[0] presisiter term4 votefor0 loglen49
+040657 LOG1 raft[0] append newlog index:49  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040658 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040658 LOG1 raft[1] append the logs index from 48 to 49
+040659 LOG1 raft[1] presisiter term4 votefor0 loglen49
+040660 LOG1 raft[0] applier start firstIndex 0 commitIndex 49 lastApplied 48
+040660 LOG1 raft[0] applies entries 48-49 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040662 LOG1 raft[1] applier start firstIndex 0 commitIndex 48 lastApplied 46
+040662 LOG1 raft[1] applies entries 46-48 in term 4
+040663 LOG1 raft[0] presisiter term4 votefor0 loglen50
+040663 LOG1 raft[0] append newlog index:50  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040664 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040664 LOG1 raft[1] append the logs index from 49 to 50
+040665 LOG1 raft[1] presisiter term4 votefor0 loglen50
+040665 LOG1 raft[1] applier start firstIndex 0 commitIndex 49 lastApplied 48
+040665 LOG1 raft[1] applies entries 48-49 in term 4
+040666 LOG1 raft[0] applier start firstIndex 0 commitIndex 50 lastApplied 49
+040666 LOG1 raft[0] applies entries 49-50 in term 4
+ctrler accept a command &{map[] [] 5 504 0 Move 1044096668270516178 0}
+040668 LOG1 raft[0] presisiter term4 votefor0 loglen51
+040668 LOG1 raft[0] append newlog index:51  term:4 | command : {Move 1044096668270516178 0 map[] [] 5 504 0}
+040670 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040670 LOG1 raft[1] append the logs index from 50 to 51
+040671 LOG1 raft[1] presisiter term4 votefor0 loglen51
+040671 LOG1 raft[1] applier start firstIndex 0 commitIndex 50 lastApplied 49
+040671 LOG1 raft[1] applies entries 49-50 in term 4
+040672 LOG1 raft[0] applier start firstIndex 0 commitIndex 51 lastApplied 50
+040672 LOG1 raft[0] applies entries 50-51 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040674 LOG1 raft[0] presisiter term4 votefor0 loglen52
+040674 LOG1 raft[0] append newlog index:52  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040675 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040676 LOG1 raft[1] append the logs index from 51 to 52
+040676 LOG1 raft[1] presisiter term4 votefor0 loglen52
+040677 LOG1 raft[1] applier start firstIndex 0 commitIndex 51 lastApplied 50
+040677 LOG1 raft[1] applies entries 50-51 in term 4
+040677 LOG1 raft[0] applier start firstIndex 0 commitIndex 52 lastApplied 51
+040677 LOG1 raft[0] applies entries 51-52 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040680 LOG1 raft[0] presisiter term4 votefor0 loglen53
+040680 LOG1 raft[0] append newlog index:53  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040681 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040681 LOG1 raft[1] append the logs index from 52 to 53
+040682 LOG1 raft[1] presisiter term4 votefor0 loglen53
+040682 LOG1 raft[1] applier start firstIndex 0 commitIndex 52 lastApplied 51
+040682 LOG1 raft[1] applies entries 51-52 in term 4
+040682 LOG1 raft[0] applier start firstIndex 0 commitIndex 53 lastApplied 52
+040682 LOG1 raft[0] applies entries 52-53 in term 4
+ctrler accept a command &{map[] [] 6 504 0 Move 1044096668270516178 0}
+040685 LOG1 raft[0] presisiter term4 votefor0 loglen54
+040685 LOG1 raft[0] append newlog index:54  term:4 | command : {Move 1044096668270516178 0 map[] [] 6 504 0}
+040686 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040686 LOG1 raft[1] append the logs index from 53 to 54
+040687 LOG1 raft[1] presisiter term4 votefor0 loglen54
+040687 LOG1 raft[1] applier start firstIndex 0 commitIndex 53 lastApplied 52
+040687 LOG1 raft[1] applies entries 52-53 in term 4
+040687 LOG1 raft[0] applier start firstIndex 0 commitIndex 54 lastApplied 53
+040688 LOG1 raft[0] applies entries 53-54 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040690 LOG1 raft[0] presisiter term4 votefor0 loglen55
+040690 LOG1 raft[0] append newlog index:55  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040691 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040692 LOG1 raft[1] append the logs index from 54 to 55
+040692 LOG1 raft[1] presisiter term4 votefor0 loglen55
+040693 LOG1 raft[1] applier start firstIndex 0 commitIndex 54 lastApplied 53
+040693 LOG1 raft[1] applies entries 53-54 in term 4
+040693 LOG1 raft[0] applier start firstIndex 0 commitIndex 55 lastApplied 54
+040693 LOG1 raft[0] applies entries 54-55 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040696 LOG1 raft[0] presisiter term4 votefor0 loglen56
+040696 LOG1 raft[0] append newlog index:56  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040697 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040697 LOG1 raft[1] append the logs index from 55 to 56
+040698 LOG1 raft[1] presisiter term4 votefor0 loglen56
+040698 LOG1 raft[1] applier start firstIndex 0 commitIndex 55 lastApplied 54
+040699 LOG1 raft[1] applies entries 54-55 in term 4
+040699 LOG1 raft[0] applier start firstIndex 0 commitIndex 56 lastApplied 55
+040699 LOG1 raft[0] applies entries 55-56 in term 4
+ctrler accept a command &{map[] [] 7 504 0 Move 1044096668270516178 0}
+040701 LOG1 raft[0] presisiter term4 votefor0 loglen57
+040701 LOG1 raft[0] append newlog index:57  term:4 | command : {Move 1044096668270516178 0 map[] [] 7 504 0}
+040702 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040702 LOG1 raft[1] append the logs index from 56 to 57
+040703 LOG1 raft[1] presisiter term4 votefor0 loglen57
+040704 LOG1 raft[0] applier start firstIndex 0 commitIndex 57 lastApplied 56
+040704 LOG1 raft[0] applies entries 56-57 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040706 LOG1 raft[0] presisiter term4 votefor0 loglen58
+040706 LOG1 raft[0] append newlog index:58  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040707 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040707 LOG1 raft[1] append the logs index from 57 to 58
+040708 LOG1 raft[1] presisiter term4 votefor0 loglen58
+040708 LOG1 raft[1] applier start firstIndex 0 commitIndex 57 lastApplied 55
+040708 LOG1 raft[0] applier start firstIndex 0 commitIndex 58 lastApplied 57
+040709 LOG1 raft[0] applies entries 57-58 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040709 LOG1 raft[1] applies entries 55-57 in term 4
+040711 LOG1 raft[0] presisiter term4 votefor0 loglen59
+040711 LOG1 raft[0] append newlog index:59  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040713 LOG1 term : 3 | raft[2] accept the appendentry from raft[0]
+040713 LOG1 raft[2] append the logs index from 26 to 59
+040714 LOG1 raft[2] presisiter term4 votefor2 loglen59
+040714 LOG1 raft[0] applier start firstIndex 0 commitIndex 59 lastApplied 58
+040714 LOG1 raft[0] applies entries 58-59 in term 4
+ctrler accept a command &{map[] [] 8 504 0 Move 1044096668270516178 0}
+040716 LOG1 raft[0] presisiter term4 votefor0 loglen60
+040716 LOG1 raft[0] append newlog index:60  term:4 | command : {Move 1044096668270516178 0 map[] [] 8 504 0}
+040717 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040717 LOG1 raft[2] append the logs index from 59 to 60
+040718 LOG1 raft[2] presisiter term4 votefor2 loglen60
+040719 LOG1 raft[0] applier start firstIndex 0 commitIndex 60 lastApplied 59
+040719 LOG1 raft[0] applies entries 59-60 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040720 LOG1 raft[0] presisiter term4 votefor0 loglen61
+040721 LOG1 raft[0] append newlog index:61  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040721 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040722 LOG1 raft[2] append the logs index from 60 to 61
+040722 LOG1 raft[2] presisiter term4 votefor2 loglen61
+040724 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040725 LOG1 raft[1] append the logs index from 58 to 61
+040725 LOG1 raft[2] applier start firstIndex 0 commitIndex 60 lastApplied 0
+040725 LOG1 raft[1] presisiter term4 votefor0 loglen61
+040726 LOG1 raft[2] applies entries 0-60 in term 4
+040726 LOG1 raft[1] applier start firstIndex 0 commitIndex 60 lastApplied 57
+040726 LOG1 raft[1] applies entries 57-60 in term 4
+040726 LOG1 raft[0] applier start firstIndex 0 commitIndex 61 lastApplied 60
+040726 LOG1 raft[0] applies entries 60-61 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040728 LOG1 raft[0] presisiter term4 votefor0 loglen62
+040728 LOG1 raft[0] append newlog index:62  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040730 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040730 LOG1 raft[1] append the logs index from 61 to 62
+040731 LOG1 raft[1] presisiter term4 votefor0 loglen62
+040731 LOG1 raft[0] applier start firstIndex 0 commitIndex 62 lastApplied 61
+040731 LOG1 raft[0] applies entries 61-62 in term 4
+ctrler accept a command &{map[] [] 9 504 0 Move 1044096668270516178 0}
+040733 LOG1 raft[0] presisiter term4 votefor0 loglen63
+040733 LOG1 raft[0] append newlog index:63  term:4 | command : {Move 1044096668270516178 0 map[] [] 9 504 0}
+040734 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040734 LOG1 raft[1] append the logs index from 62 to 63
+040735 LOG1 raft[1] presisiter term4 votefor0 loglen63
+040735 LOG1 raft[0] applier start firstIndex 0 commitIndex 63 lastApplied 62
+040735 LOG1 raft[0] applies entries 62-63 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040737 LOG1 raft[0] presisiter term4 votefor0 loglen64
+040737 LOG1 raft[0] append newlog index:64  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040737 LOG1 raft[1] applier start firstIndex 0 commitIndex 62 lastApplied 60
+040738 LOG1 raft[1] applies entries 60-62 in term 4
+040738 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040739 LOG1 raft[1] append the logs index from 63 to 64
+040739 LOG1 raft[1] presisiter term4 votefor0 loglen64
+040740 LOG1 raft[1] applier start firstIndex 0 commitIndex 63 lastApplied 62
+040740 LOG1 raft[1] applies entries 62-63 in term 4
+040740 LOG1 raft[0] applier start firstIndex 0 commitIndex 64 lastApplied 63
+040740 LOG1 raft[0] applies entries 63-64 in term 4
+040742 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040742 LOG1 raft[2] append the logs index from 61 to 64
+040743 LOG1 raft[2] presisiter term4 votefor2 loglen64
+040743 LOG1 raft[2] applier start firstIndex 0 commitIndex 64 lastApplied 60
+040744 LOG1 raft[2] applies entries 60-64 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040746 LOG1 raft[0] presisiter term4 votefor0 loglen65
+040746 LOG1 raft[0] append newlog index:65  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040747 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040748 LOG1 raft[2] append the logs index from 64 to 65
+040748 LOG1 raft[2] presisiter term4 votefor2 loglen65
+040749 LOG1 raft[0] applier start firstIndex 0 commitIndex 65 lastApplied 64
+040749 LOG1 raft[0] applies entries 64-65 in term 4
+ctrler accept a command &{map[] [503] 0 0 0 Leave 1044096668270516178 0}
+040751 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040751 LOG1 raft[1] append the logs index from 64 to 65
+040751 LOG1 raft[0] presisiter term4 votefor0 loglen66
+040752 LOG1 raft[0] append newlog index:66  term:4 | command : {Leave 1044096668270516178 0 map[] [503] 0 0 0}
+040753 LOG1 raft[1] presisiter term4 votefor0 loglen65
+040753 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040754 LOG1 raft[2] append the logs index from 65 to 66
+040754 LOG1 raft[2] presisiter term4 votefor2 loglen66
+040755 LOG1 raft[2] applier start firstIndex 0 commitIndex 65 lastApplied 64
+040755 LOG1 raft[2] applies entries 64-65 in term 4
+040755 LOG1 raft[1] applier start firstIndex 0 commitIndex 64 lastApplied 63
+040755 LOG1 raft[1] applies entries 63-64 in term 4
+040755 LOG1 raft[0] applier start firstIndex 0 commitIndex 66 lastApplied 65
+040755 LOG1 raft[0] applies entries 65-66 in term 4
+040756 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040756 LOG1 raft[1] append the logs index from 65 to 66
+ctrler accept a command &{map[] [504] 0 0 0 Leave 1044096668270516178 0}
+040758 LOG1 raft[1] presisiter term4 votefor0 loglen66
+040758 LOG1 raft[1] applier start firstIndex 0 commitIndex 65 lastApplied 64
+040758 LOG1 raft[1] applies entries 64-65 in term 4
+040759 LOG1 raft[0] presisiter term4 votefor0 loglen67
+040759 LOG1 raft[0] append newlog index:67  term:4 | command : {Leave 1044096668270516178 0 map[] [504] 0 0 0}
+040760 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040760 LOG1 raft[1] append the logs index from 66 to 67
+040761 LOG1 raft[1] presisiter term4 votefor0 loglen67
+040762 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040763 LOG1 raft[2] append the logs index from 66 to 67
+040764 LOG1 raft[2] presisiter term4 votefor2 loglen67
+040764 LOG1 raft[0] applier start firstIndex 0 commitIndex 67 lastApplied 66
+040764 LOG1 raft[0] applies entries 66-67 in term 4
+  ... Passed
+Test: Concurrent leave/join ...
+ctrler accept a command &{map[1190:[s190a]] [] 0 0 0 Join 3826900839402349757 0}
+040768 LOG1 raft[0] presisiter term4 votefor0 loglen68
+040768 LOG1 raft[0] append newlog index:68  term:4 | command : {Join 3826900839402349757 0 map[1190:[s190a]] [] 0 0 0}
+040769 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040769 LOG1 raft[2] append the logs index from 67 to 68
+040770 LOG1 raft[2] presisiter term4 votefor2 loglen68
+040771 LOG1 raft[0] applier start firstIndex 0 commitIndex 68 lastApplied 67
+040771 LOG1 raft[0] applies entries 67-68 in term 4
+ctrler accept a command &{map[190:[s190b]] [] 0 0 0 Join 3826900839402349757 0}
+ctrler accept a command &{map[1140:[s140a]] [] 0 0 0 Join 2506965297963148587 0}
+ctrler accept a command &{map[1160:[s160a]] [] 0 0 0 Join 1722361940562520850 0}
+ctrler accept a command &{map[1180:[s180a]] [] 0 0 0 Join 2852224725822035199 0}
+ctrler accept a command &{map[1180:[s180a]] [] 0 0 0 Join 2852224725822035199 0}
+ctrler accept a command &{map[1160:[s160a]] [] 0 0 0 Join 1722361940562520850 0}
+ctrler accept a command &{map[1170:[s170a]] [] 0 0 0 Join 4514695876918440471 0}
+ctrler accept a command &{map[1150:[s150a]] [] 0 0 0 Join 2489288423746580061 0}
+ctrler accept a command &{map[1170:[s170a]] [] 0 0 0 Join 4514695876918440471 0}
+ctrler accept a command &{map[1150:[s150a]] [] 0 0 0 Join 2489288423746580061 0}
+ctrler accept a command &{map[1170:[s170a]] [] 0 0 0 Join 4514695876918440471 0}
+ctrler accept a command &{map[1100:[s100a]] [] 0 0 0 Join 2262835098903569270 0}
+ctrler accept a command &{map[1150:[s150a]] [] 0 0 0 Join 2489288423746580061 0}
+ctrler accept a command &{map[1110:[s110a]] [] 0 0 0 Join 3426579180729054107 0}
+ctrler accept a command &{map[1100:[s100a]] [] 0 0 0 Join 2262835098903569270 0}
+040782 LOG1 raft[1] applier start firstIndex 0 commitIndex 66 lastApplied 65
+040783 LOG1 raft[1] applies entries 65-66 in term 4
+040782 LOG1 raft[2] applier start firstIndex 0 commitIndex 67 lastApplied 65
+040783 LOG1 raft[2] applies entries 65-67 in term 4
+ctrler accept a command &{map[1120:[s120a]] [] 0 0 0 Join 1415289606724062834 0}
+ctrler accept a command &{map[1110:[s110a]] [] 0 0 0 Join 3426579180729054107 0}
+ctrler accept a command &{map[1120:[s120a]] [] 0 0 0 Join 1415289606724062834 0}
+ctrler accept a command &{map[1110:[s110a]] [] 0 0 0 Join 3426579180729054107 0}
+ctrler accept a command &{map[1120:[s120a]] [] 0 0 0 Join 1415289606724062834 0}
+ctrler accept a command &{map[1100:[s100a]] [] 0 0 0 Join 2262835098903569270 0}
+040789 LOG1 raft[0] presisiter term4 votefor0 loglen69
+040789 LOG1 raft[0] append newlog index:69  term:4 | command : {Join 3826900839402349757 0 map[190:[s190b]] [] 0 0 0}
+ctrler accept a command &{map[1130:[s130a]] [] 0 0 0 Join 2155605381613106491 0}
+040792 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040792 LOG1 raft[1] append the logs index from 67 to 69
+040792 LOG1 raft[0] presisiter term4 votefor0 loglen70
+040792 LOG1 raft[0] append newlog index:70  term:4 | command : {Join 2506965297963148587 0 map[1140:[s140a]] [] 0 0 0}
+ctrler accept a command &{map[1130:[s130a]] [] 0 0 0 Join 2155605381613106491 0}
+ctrler accept a command &{map[1130:[s130a]] [] 0 0 0 Join 2155605381613106491 0}
+040803 LOG1 raft[0] presisiter term4 votefor0 loglen71
+040803 LOG1 raft[0] append newlog index:71  term:4 | command : {Join 2852224725822035199 0 map[1180:[s180a]] [] 0 0 0}
+040805 LOG1 raft[1] presisiter term4 votefor0 loglen69
+040807 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040808 LOG1 raft[2] append the logs index from 68 to 71
+040808 LOG1 raft[1] applier start firstIndex 0 commitIndex 68 lastApplied 66
+040808 LOG1 raft[1] applies entries 66-68 in term 4
+040808 LOG1 raft[0] presisiter term4 votefor0 loglen72
+040809 LOG1 raft[2] presisiter term4 votefor2 loglen71
+040809 LOG1 raft[0] append newlog index:72  term:4 | command : {Join 1722361940562520850 0 map[1160:[s160a]] [] 0 0 0}
+040809 LOG1 raft[2] applier start firstIndex 0 commitIndex 68 lastApplied 67
+040809 LOG1 raft[2] applies entries 67-68 in term 4
+040811 LOG1 raft[0] presisiter term4 votefor0 loglen73
+040811 LOG1 raft[0] append newlog index:73  term:4 | command : {Join 4514695876918440471 0 map[1170:[s170a]] [] 0 0 0}
+040812 LOG1 raft[0] presisiter term4 votefor0 loglen74
+040812 LOG1 raft[0] append newlog index:74  term:4 | command : {Join 2489288423746580061 0 map[1150:[s150a]] [] 0 0 0}
+040813 LOG1 raft[0] presisiter term4 votefor0 loglen75
+040813 LOG1 raft[0] append newlog index:75  term:4 | command : {Join 3426579180729054107 0 map[1110:[s110a]] [] 0 0 0}
+040814 LOG1 raft[0] presisiter term4 votefor0 loglen76
+040814 LOG1 raft[0] append newlog index:76  term:4 | command : {Join 1415289606724062834 0 map[1120:[s120a]] [] 0 0 0}
+040815 LOG1 raft[0] presisiter term4 votefor0 loglen77
+040815 LOG1 raft[0] append newlog index:77  term:4 | command : {Join 2262835098903569270 0 map[1100:[s100a]] [] 0 0 0}
+040816 LOG1 raft[0] presisiter term4 votefor0 loglen78
+040816 LOG1 raft[0] append newlog index:78  term:4 | command : {Join 2155605381613106491 0 map[1130:[s130a]] [] 0 0 0}
+040817 LOG1 raft[0] applier start firstIndex 0 commitIndex 69 lastApplied 68
+040817 LOG1 raft[0] applies entries 68-69 in term 4
+040818 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040818 LOG1 raft[1] append the logs index from 69 to 78
+ctrler accept a command &{map[] [1190] 0 0 0 Leave 3826900839402349757 0}
+040819 LOG1 raft[1] presisiter term4 votefor0 loglen78
+040820 LOG1 raft[1] applier start firstIndex 0 commitIndex 69 lastApplied 68
+040820 LOG1 raft[1] applies entries 68-69 in term 4
+040821 LOG1 raft[0] presisiter term4 votefor0 loglen79
+040821 LOG1 raft[0] append newlog index:79  term:4 | command : {Leave 3826900839402349757 0 map[] [1190] 0 0 0}
+040822 LOG1 raft[0] applier start firstIndex 0 commitIndex 78 lastApplied 69
+040823 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040823 LOG1 raft[1] append the logs index from 78 to 79
+040824 LOG1 raft[1] presisiter term4 votefor0 loglen79
+ctrler accept a command &{map[180:[s180b]] [] 0 0 0 Join 2852224725822035199 0}
+ctrler accept a command &{map[180:[s180b]] [] 0 0 0 Join 2852224725822035199 0}
+040826 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040826 LOG1 raft[2] append the logs index from 71 to 79
+040827 LOG1 raft[0] presisiter term4 votefor0 loglen80
+040828 LOG1 raft[0] append newlog index:80  term:4 | command : {Join 2852224725822035199 0 map[180:[s180b]] [] 0 0 0}
+ctrler accept a command &{map[140:[s140b]] [] 0 0 0 Join 2506965297963148587 0}
+040829 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040829 LOG1 raft[1] append the logs index from 79 to 80
+040829 LOG1 raft[0] presisiter term4 votefor0 loglen81
+040829 LOG1 raft[0] append newlog index:81  term:4 | command : {Join 2506965297963148587 0 map[140:[s140b]] [] 0 0 0}
+040830 LOG1 raft[1] presisiter term4 votefor0 loglen80
+ctrler accept a command &{map[170:[s170b]] [] 0 0 0 Join 4514695876918440471 0}
+040831 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040831 LOG1 raft[1] append the logs index from 80 to 81
+ctrler accept a command &{map[170:[s170b]] [] 0 0 0 Join 4514695876918440471 0}
+040832 LOG1 raft[1] presisiter term4 votefor0 loglen81
+040833 LOG1 raft[1] applier start firstIndex 0 commitIndex 80 lastApplied 69
+ctrler accept a command &{map[160:[s160b]] [] 0 0 0 Join 1722361940562520850 0}
+040834 LOG1 raft[1] applies entries 69-80 in term 4
+ctrler accept a command &{map[160:[s160b]] [] 0 0 0 Join 1722361940562520850 0}
+ctrler accept a command &{map[110:[s110b]] [] 0 0 0 Join 3426579180729054107 0}
+040835 LOG1 raft[0] presisiter term4 votefor0 loglen82
+040835 LOG1 raft[0] append newlog index:82  term:4 | command : {Join 1722361940562520850 0 map[160:[s160b]] [] 0 0 0}
+040836 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+ctrler accept a command &{map[110:[s110b]] [] 0 0 0 Join 3426579180729054107 0}
+040837 LOG1 raft[1] append the logs index from 81 to 82
+040838 LOG1 raft[1] presisiter term4 votefor0 loglen82
+ctrler accept a command &{map[150:[s150b]] [] 0 0 0 Join 2489288423746580061 0}
+040838 LOG1 raft[1] applier start firstIndex 0 commitIndex 81 lastApplied 80
+040838 LOG1 raft[1] applies entries 80-81 in term 4
+ctrler accept a command &{map[150:[s150b]] [] 0 0 0 Join 2489288423746580061 0}
+ctrler accept a command &{map[100:[s100b]] [] 0 0 0 Join 2262835098903569270 0}
+ctrler accept a command &{map[120:[s120b]] [] 0 0 0 Join 1415289606724062834 0}
+040840 LOG1 raft[0] applies entries 69-78 in term 4
+040840 LOG1 raft[0] applier start firstIndex 0 commitIndex 82 lastApplied 78
+ctrler accept a command &{map[100:[s100b]] [] 0 0 0 Join 2262835098903569270 0}
+ctrler accept a command &{map[130:[s130b]] [] 0 0 0 Join 2155605381613106491 0}
+ctrler accept a command &{map[] [1140] 0 0 0 Leave 2506965297963148587 0}
+ctrler accept a command &{map[130:[s130b]] [] 0 0 0 Join 2155605381613106491 0}
+040843 LOG1 raft[0] presisiter term4 votefor0 loglen83
+040843 LOG1 raft[0] append newlog index:83  term:4 | command : {Leave 2506965297963148587 0 map[] [1140] 0 0 0}
+ctrler accept a command &{map[] [1180] 0 0 0 Leave 2852224725822035199 0}
+040844 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040844 LOG1 raft[1] append the logs index from 82 to 83
+ctrler accept a command &{map[] [1180] 0 0 0 Leave 2852224725822035199 0}
+040845 LOG1 raft[1] presisiter term4 votefor0 loglen83
+040846 LOG1 raft[0] presisiter term4 votefor0 loglen84
+040846 LOG1 raft[0] append newlog index:84  term:4 | command : {Leave 2852224725822035199 0 map[] [1180] 0 0 0}
+040846 LOG1 raft[1] applier start firstIndex 0 commitIndex 82 lastApplied 81
+040846 LOG1 raft[1] applies entries 81-82 in term 4
+040846 LOG1 raft[0] applies entries 78-82 in term 4
+040846 LOG1 raft[0] applier start firstIndex 0 commitIndex 83 lastApplied 82
+040847 LOG1 raft[0] applies entries 82-83 in term 4
+040847 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040847 LOG1 raft[1] append the logs index from 83 to 84
+040848 LOG1 raft[1] presisiter term4 votefor0 loglen84
+ctrler accept a command &{map[] [1160] 0 0 0 Leave 1722361940562520850 0}
+040848 LOG1 raft[0] applier start firstIndex 0 commitIndex 84 lastApplied 83
+040848 LOG1 raft[0] applies entries 83-84 in term 4
+040849 LOG1 raft[1] applier start firstIndex 0 commitIndex 83 lastApplied 82
+040849 LOG1 raft[1] applies entries 82-83 in term 4
+ctrler accept a command &{map[] [1160] 0 0 0 Leave 1722361940562520850 0}
+040850 LOG1 raft[0] presisiter term4 votefor0 loglen85
+040850 LOG1 raft[0] append newlog index:85  term:4 | command : {Leave 1722361940562520850 0 map[] [1160] 0 0 0}
+040851 LOG1 raft[2] presisiter term4 votefor2 loglen79
+040851 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040852 LOG1 raft[1] append the logs index from 84 to 85
+040853 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040853 LOG1 raft[2] append the logs index from 79 to 85
+040853 LOG1 raft[1] presisiter term4 votefor0 loglen85
+040854 LOG1 raft[2] presisiter term4 votefor2 loglen85
+040855 LOG1 raft[1] applier start firstIndex 0 commitIndex 84 lastApplied 83
+040855 LOG1 raft[1] applies entries 83-84 in term 4
+040855 LOG1 raft[0] applier start firstIndex 0 commitIndex 85 lastApplied 84
+040855 LOG1 raft[0] applies entries 84-85 in term 4
+ctrler accept a command &{map[170:[s170b]] [] 0 0 0 Join 4514695876918440471 0}
+ctrler accept a command &{map[110:[s110b]] [] 0 0 0 Join 3426579180729054107 0}
+040858 LOG1 raft[0] presisiter term4 votefor0 loglen86
+040858 LOG1 raft[0] append newlog index:86  term:4 | command : {Join 4514695876918440471 0 map[170:[s170b]] [] 0 0 0}
+ctrler accept a command &{map[150:[s150b]] [] 0 0 0 Join 2489288423746580061 0}
+040859 LOG1 raft[0] presisiter term4 votefor0 loglen87
+040859 LOG1 raft[0] append newlog index:87  term:4 | command : {Join 3426579180729054107 0 map[110:[s110b]] [] 0 0 0}
+ctrler accept a command &{map[120:[s120b]] [] 0 0 0 Join 1415289606724062834 0}
+040860 LOG1 raft[0] presisiter term4 votefor0 loglen88
+040860 LOG1 raft[0] append newlog index:88  term:4 | command : {Join 2489288423746580061 0 map[150:[s150b]] [] 0 0 0}
+ctrler accept a command &{map[120:[s120b]] [] 0 0 0 Join 1415289606724062834 0}
+040861 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040861 LOG1 raft[1] append the logs index from 85 to 88
+040862 LOG1 raft[0] presisiter term4 votefor0 loglen89
+040862 LOG1 raft[0] append newlog index:89  term:4 | command : {Join 1415289606724062834 0 map[120:[s120b]] [] 0 0 0}
+040862 LOG1 raft[1] presisiter term4 votefor0 loglen88
+040863 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+ctrler accept a command &{map[100:[s100b]] [] 0 0 0 Join 2262835098903569270 0}
+040864 LOG1 raft[1] append the logs index from 88 to 89
+040865 LOG1 raft[0] presisiter term4 votefor0 loglen90
+040865 LOG1 raft[0] append newlog index:90  term:4 | command : {Join 2262835098903569270 0 map[100:[s100b]] [] 0 0 0}
+040865 LOG1 raft[2] applier start firstIndex 0 commitIndex 84 lastApplied 68
+ctrler accept a command &{map[130:[s130b]] [] 0 0 0 Join 2155605381613106491 0}
+040866 LOG1 raft[2] applies entries 68-84 in term 4
+040865 LOG1 raft[1] presisiter term4 votefor0 loglen89
+040867 LOG1 raft[0] presisiter term4 votefor0 loglen91
+040867 LOG1 raft[0] append newlog index:91  term:4 | command : {Join 2155605381613106491 0 map[130:[s130b]] [] 0 0 0}
+040867 LOG1 raft[0] applier start firstIndex 0 commitIndex 88 lastApplied 85
+040868 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040869 LOG1 raft[1] append the logs index from 89 to 91
+ctrler accept a command &{map[] [1110] 0 0 0 Leave 3426579180729054107 0}
+040870 LOG1 raft[1] presisiter term4 votefor0 loglen91
+ctrler accept a command &{map[] [1170] 0 0 0 Leave 4514695876918440471 0}
+040870 LOG1 raft[1] applier start firstIndex 0 commitIndex 89 lastApplied 84
+040871 LOG1 raft[1] applies entries 84-89 in term 4
+ctrler accept a command &{map[] [1170] 0 0 0 Leave 4514695876918440471 0}
+ctrler accept a command &{map[] [1110] 0 0 0 Leave 3426579180729054107 0}
+ctrler accept a command &{map[] [1170] 0 0 0 Leave 4514695876918440471 0}
+ctrler accept a command &{map[] [1110] 0 0 0 Leave 3426579180729054107 0}
+040874 LOG1 raft[0] presisiter term4 votefor0 loglen92
+040874 LOG1 raft[0] append newlog index:92  term:4 | command : {Leave 4514695876918440471 0 map[] [1170] 0 0 0}
+ctrler accept a command &{map[] [1150] 0 0 0 Leave 2489288423746580061 0}
+040875 LOG1 raft[0] presisiter term4 votefor0 loglen93
+040875 LOG1 raft[0] append newlog index:93  term:4 | command : {Leave 3426579180729054107 0 map[] [1110] 0 0 0}
+040875 LOG1 raft[0] applies entries 85-88 in term 4
+040875 LOG1 raft[0] applier start firstIndex 0 commitIndex 91 lastApplied 88
+ctrler accept a command &{map[] [1150] 0 0 0 Leave 2489288423746580061 0}
+ctrler accept a command &{map[] [1150] 0 0 0 Leave 2489288423746580061 0}
+ctrler accept a command &{map[] [1100] 0 0 0 Leave 2262835098903569270 0}
+040880 LOG1 raft[0] presisiter term4 votefor0 loglen94
+040880 LOG1 raft[0] append newlog index:94  term:4 | command : {Leave 2489288423746580061 0 map[] [1150] 0 0 0}
+ctrler accept a command &{map[] [1100] 0 0 0 Leave 2262835098903569270 0}
+040887 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040892 LOG1 raft[2] append the logs index from 85 to 94
+040889 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040892 LOG1 raft[1] append the logs index from 91 to 94
+040893 LOG1 raft[2] presisiter term4 votefor2 loglen94
+040894 LOG1 raft[2] applier start firstIndex 0 commitIndex 91 lastApplied 84
+040894 LOG1 raft[1] presisiter term4 votefor0 loglen94
+040894 LOG1 raft[2] applies entries 84-91 in term 4
+040889 LOG1 raft[0] applies entries 88-91 in term 4
+040894 LOG1 raft[1] applier start firstIndex 0 commitIndex 91 lastApplied 89
+040895 LOG1 raft[1] applies entries 89-91 in term 4
+ctrler accept a command &{map[] [1120] 0 0 0 Leave 1415289606724062834 0}
+ctrler accept a command &{map[] [1100] 0 0 0 Leave 2262835098903569270 0}
+ctrler accept a command &{map[] [1120] 0 0 0 Leave 1415289606724062834 0}
+040897 LOG1 raft[0] presisiter term4 votefor0 loglen95
+040897 LOG1 raft[0] append newlog index:95  term:4 | command : {Leave 2262835098903569270 0 map[] [1100] 0 0 0}
+ctrler accept a command &{map[] [1120] 0 0 0 Leave 1415289606724062834 0}
+040898 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040898 LOG1 raft[2] append the logs index from 94 to 95
+040899 LOG1 raft[0] presisiter term4 votefor0 loglen96
+040899 LOG1 raft[2] presisiter term4 votefor2 loglen95
+040899 LOG1 raft[0] append newlog index:96  term:4 | command : {Leave 1415289606724062834 0 map[] [1120] 0 0 0}
+040899 LOG1 raft[0] applier start firstIndex 0 commitIndex 94 lastApplied 91
+ctrler accept a command &{map[] [1130] 0 0 0 Leave 2155605381613106491 0}
+040901 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040901 LOG1 raft[2] append the logs index from 95 to 96
+ctrler accept a command &{map[] [1130] 0 0 0 Leave 2155605381613106491 0}
+040902 LOG1 raft[2] presisiter term4 votefor2 loglen96
+040902 LOG1 raft[0] applies entries 91-94 in term 4
+040902 LOG1 raft[0] applier start firstIndex 0 commitIndex 95 lastApplied 94
+040903 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040903 LOG1 raft[1] append the logs index from 94 to 96
+040904 LOG1 raft[0] applies entries 94-95 in term 4
+040904 LOG1 raft[0] applier start firstIndex 0 commitIndex 96 lastApplied 95
+040904 LOG1 raft[0] applies entries 95-96 in term 4
+040904 LOG1 raft[1] presisiter term4 votefor0 loglen96
+040904 LOG1 raft[2] applier start firstIndex 0 commitIndex 95 lastApplied 91
+040905 LOG1 raft[2] applies entries 91-95 in term 4
+040905 LOG1 raft[1] applier start firstIndex 0 commitIndex 95 lastApplied 91
+040905 LOG1 raft[1] applies entries 91-95 in term 4
+ctrler accept a command &{map[] [1130] 0 0 0 Leave 2155605381613106491 0}
+040907 LOG1 raft[0] presisiter term4 votefor0 loglen97
+040907 LOG1 raft[0] append newlog index:97  term:4 | command : {Leave 2155605381613106491 0 map[] [1130] 0 0 0}
+040908 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040908 LOG1 raft[2] append the logs index from 96 to 97
+040910 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040910 LOG1 raft[1] append the logs index from 96 to 97
+040911 LOG1 raft[1] presisiter term4 votefor0 loglen97
+040912 LOG1 raft[0] applier start firstIndex 0 commitIndex 97 lastApplied 96
+040912 LOG1 raft[0] applies entries 96-97 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040914 LOG1 raft[0] presisiter term4 votefor0 loglen98
+040915 LOG1 raft[0] append newlog index:98  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040915 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040916 LOG1 raft[1] append the logs index from 97 to 98
+040917 LOG1 raft[1] presisiter term4 votefor0 loglen98
+040917 LOG1 raft[0] applier start firstIndex 0 commitIndex 98 lastApplied 97
+040917 LOG1 raft[0] applies entries 97-98 in term 4
+  ... Passed
+Test: Minimal transfers after joins ...
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040920 LOG1 raft[0] presisiter term4 votefor0 loglen99
+040920 LOG1 raft[0] append newlog index:99  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040921 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040921 LOG1 raft[1] append the logs index from 98 to 99
+040922 LOG1 raft[1] presisiter term4 votefor0 loglen99
+040923 LOG1 raft[0] applier start firstIndex 0 commitIndex 99 lastApplied 98
+040923 LOG1 raft[0] applies entries 98-99 in term 4
+ctrler accept a command &{map[11:[11a 11b 11b]] [] 0 0 0 Join 1044096668270516178 0}
+040925 LOG1 raft[0] presisiter term4 votefor0 loglen100
+040925 LOG1 raft[0] append newlog index:100  term:4 | command : {Join 1044096668270516178 0 map[11:[11a 11b 11b]] [] 0 0 0}
+040927 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040927 LOG1 raft[1] append the logs index from 99 to 100
+040928 LOG1 raft[1] presisiter term4 votefor0 loglen100
+040928 LOG1 raft[0] applier start firstIndex 0 commitIndex 100 lastApplied 99
+040929 LOG1 raft[0] applies entries 99-100 in term 4
+ctrler accept a command &{map[12:[12a 12b 12b]] [] 0 0 0 Join 1044096668270516178 0}
+040931 LOG1 raft[0] presisiter term4 votefor0 loglen101
+040931 LOG1 raft[0] append newlog index:101  term:4 | command : {Join 1044096668270516178 0 map[12:[12a 12b 12b]] [] 0 0 0}
+040932 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040932 LOG1 raft[1] append the logs index from 100 to 101
+040933 LOG1 raft[1] presisiter term4 votefor0 loglen101
+040934 LOG1 raft[0] applier start firstIndex 0 commitIndex 101 lastApplied 100
+040934 LOG1 raft[0] applies entries 100-101 in term 4
+ctrler accept a command &{map[13:[13a 13b 13b]] [] 0 0 0 Join 1044096668270516178 0}
+040936 LOG1 raft[0] presisiter term4 votefor0 loglen102
+040937 LOG1 raft[0] append newlog index:102  term:4 | command : {Join 1044096668270516178 0 map[13:[13a 13b 13b]] [] 0 0 0}
+040937 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040938 LOG1 raft[1] append the logs index from 101 to 102
+040939 LOG1 raft[1] presisiter term4 votefor0 loglen102
+040939 LOG1 raft[0] applier start firstIndex 0 commitIndex 102 lastApplied 101
+040939 LOG1 raft[0] applies entries 101-102 in term 4
+ctrler accept a command &{map[14:[14a 14b 14b]] [] 0 0 0 Join 1044096668270516178 0}
+040942 LOG1 raft[0] presisiter term4 votefor0 loglen103
+040942 LOG1 raft[0] append newlog index:103  term:4 | command : {Join 1044096668270516178 0 map[14:[14a 14b 14b]] [] 0 0 0}
+040943 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040943 LOG1 raft[1] append the logs index from 102 to 103
+040944 LOG1 raft[1] presisiter term4 votefor0 loglen103
+040945 LOG1 raft[0] applier start firstIndex 0 commitIndex 103 lastApplied 102
+040945 LOG1 raft[0] applies entries 102-103 in term 4
+ctrler accept a command &{map[15:[15a 15b 15b]] [] 0 0 0 Join 1044096668270516178 0}
+040948 LOG1 raft[0] presisiter term4 votefor0 loglen104
+040948 LOG1 raft[0] append newlog index:104  term:4 | command : {Join 1044096668270516178 0 map[15:[15a 15b 15b]] [] 0 0 0}
+040949 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040949 LOG1 raft[1] append the logs index from 103 to 104
+040950 LOG1 raft[1] presisiter term4 votefor0 loglen104
+040950 LOG1 raft[0] applier start firstIndex 0 commitIndex 104 lastApplied 103
+040951 LOG1 raft[0] applies entries 103-104 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+040953 LOG1 raft[0] presisiter term4 votefor0 loglen105
+040953 LOG1 raft[0] append newlog index:105  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+040954 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040955 LOG1 raft[1] append the logs index from 104 to 105
+040956 LOG1 raft[1] presisiter term4 votefor0 loglen105
+040956 LOG1 raft[0] applier start firstIndex 0 commitIndex 105 lastApplied 104
+040956 LOG1 raft[0] applies entries 104-105 in term 4
+  ... Passed
+Test: Minimal transfers after leaves ...
+ctrler accept a command &{map[] [11] 0 0 0 Leave 1044096668270516178 0}
+040959 LOG1 raft[0] presisiter term4 votefor0 loglen106
+040959 LOG1 raft[0] append newlog index:106  term:4 | command : {Leave 1044096668270516178 0 map[] [11] 0 0 0}
+040960 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040960 LOG1 raft[1] append the logs index from 105 to 106
+040961 LOG1 raft[1] presisiter term4 votefor0 loglen106
+040962 LOG1 raft[0] applier start firstIndex 0 commitIndex 106 lastApplied 105
+040962 LOG1 raft[0] applies entries 105-106 in term 4
+ctrler accept a command &{map[] [12] 0 0 0 Leave 1044096668270516178 0}
+040964 LOG1 raft[0] presisiter term4 votefor0 loglen107
+040965 LOG1 raft[0] append newlog index:107  term:4 | command : {Leave 1044096668270516178 0 map[] [12] 0 0 0}
+040966 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040966 LOG1 raft[1] append the logs index from 106 to 107
+040967 LOG1 raft[1] presisiter term4 votefor0 loglen107
+040968 LOG1 raft[0] applier start firstIndex 0 commitIndex 107 lastApplied 106
+040968 LOG1 raft[0] applies entries 106-107 in term 4
+ctrler accept a command &{map[] [13] 0 0 0 Leave 1044096668270516178 0}
+040911 LOG1 raft[2] presisiter term4 votefor2 loglen97
+040970 LOG1 raft[1] applier start firstIndex 0 commitIndex 106 lastApplied 95
+040970 LOG1 raft[2] applier start firstIndex 0 commitIndex 96 lastApplied 95
+040970 LOG1 raft[2] applies entries 95-96 in term 4
+040971 LOG1 raft[1] applies entries 95-106 in term 4
+040972 LOG1 raft[0] presisiter term4 votefor0 loglen108
+040973 LOG1 raft[0] append newlog index:108  term:4 | command : {Leave 1044096668270516178 0 map[] [13] 0 0 0}
+040974 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040975 LOG1 raft[2] append the logs index from 97 to 108
+040975 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040975 LOG1 raft[1] append the logs index from 107 to 108
+040976 LOG1 raft[2] presisiter term4 votefor2 loglen108
+040977 LOG1 raft[2] applier start firstIndex 0 commitIndex 107 lastApplied 96
+040978 LOG1 raft[1] presisiter term4 votefor0 loglen108
+040978 LOG1 raft[2] applies entries 96-107 in term 4
+040978 LOG1 raft[1] applier start firstIndex 0 commitIndex 107 lastApplied 106
+040978 LOG1 raft[1] applies entries 106-107 in term 4
+040978 LOG1 raft[0] applier start firstIndex 0 commitIndex 108 lastApplied 107
+040978 LOG1 raft[0] applies entries 107-108 in term 4
+ctrler accept a command &{map[] [14] 0 0 0 Leave 1044096668270516178 0}
+040986 LOG1 raft[0] presisiter term4 votefor0 loglen109
+040986 LOG1 raft[0] append newlog index:109  term:4 | command : {Leave 1044096668270516178 0 map[] [14] 0 0 0}
+040991 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040991 LOG1 raft[2] append the logs index from 108 to 109
+040993 LOG1 raft[2] presisiter term4 votefor2 loglen109
+040993 LOG1 raft[0] applier start firstIndex 0 commitIndex 109 lastApplied 108
+040993 LOG1 raft[0] applies entries 108-109 in term 4
+040994 LOG1 term : 4 | raft[1] accept the appendentry from raft[0]
+040994 LOG1 raft[1] append the logs index from 108 to 109
+ctrler accept a command &{map[] [15] 0 0 0 Leave 1044096668270516178 0}
+040996 LOG1 raft[1] presisiter term4 votefor0 loglen109
+040996 LOG1 raft[1] applier start firstIndex 0 commitIndex 108 lastApplied 107
+040996 LOG1 raft[1] applies entries 107-108 in term 4
+040996 LOG1 raft[2] applier start firstIndex 0 commitIndex 108 lastApplied 107
+040996 LOG1 raft[2] applies entries 107-108 in term 4
+040996 LOG1 raft[0] presisiter term4 votefor0 loglen110
+040996 LOG1 raft[0] append newlog index:110  term:4 | command : {Leave 1044096668270516178 0 map[] [15] 0 0 0}
+040997 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+040997 LOG1 raft[2] append the logs index from 109 to 110
+040999 LOG1 raft[2] presisiter term4 votefor2 loglen110
+040999 LOG1 raft[0] applier start firstIndex 0 commitIndex 110 lastApplied 109
+041000 LOG1 raft[0] applies entries 109-110 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 1044096668270516178 0}
+041002 LOG1 raft[0] presisiter term4 votefor0 loglen111
+041002 LOG1 raft[0] append newlog index:111  term:4 | command : {Query 1044096668270516178 0 map[] [] 0 0 -1}
+041003 LOG1 term : 4 | raft[2] accept the appendentry from raft[0]
+041003 LOG1 raft[2] append the logs index from 110 to 111
+041005 LOG1 raft[2] presisiter term4 votefor2 loglen111
+041005 LOG1 raft[0] applier start firstIndex 0 commitIndex 111 lastApplied 110
+041005 LOG1 raft[0] applies entries 110-111 in term 4
+  ... Passed
+Test: Multi-group join/leave ...
+041008 LOG1 raft[2] applier start firstIndex 0 commitIndex 110 lastApplied 108
+041008 LOG1 raft[2] applies entries 108-110 in term 4
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+042946 LOG1 Term 4 state : 2 | raft[0] heartbeat timeout
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+046147 LOG1 state 0 Term 0 | raft[0] election timeout
+046147 LOG1 Term 0 | raft[0] convert from 0 to 1
+046148 LOG1 raft[0] presisiter term1 votefor0 loglen0
+046148 LOG1  term : 1 | raft[0][state : 1] start a election 
+046148 LOG1 vote for self raft[0]
+046148 LOG1 raft[0] sent requestvote to raft[2]
+046149 LOG1 raft[0] sent requestvote to raft[1]
+046150 LOG1 term : 0 | raft[2] accept the requestvote from raft[0]
+046150 LOG1 term : 1 | raft[2] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+046150 LOG1 raft[2] presisiter term1 votefor0 loglen0
+046150 LOG1 Term 1 | raft[0] convert from 1 to 2
+046150 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+046151 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+046151 LOG1 term : 0 | raft[1] accept the requestvote from raft[0]
+046151 LOG1 term : 1 | raft[1] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+046151 LOG1 raft[1] presisiter term1 votefor0 loglen0
+046151 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+046152 LOG1 raft[2] presisiter term1 votefor0 loglen0
+046152 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+046153 LOG1 raft[1] presisiter term1 votefor0 loglen0
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047046 LOG1 raft[0] presisiter term1 votefor0 loglen1
+047046 LOG1 raft[0] append newlog index:1  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047048 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047048 LOG1 raft[2] append the logs index from 0 to 1
+047048 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047049 LOG1 raft[1] append the logs index from 0 to 1
+047049 LOG1 raft[1] presisiter term1 votefor0 loglen1
+047050 LOG1 raft[0] applier start firstIndex 0 commitIndex 1 lastApplied 0
+047050 LOG1 raft[0] applies entries 0-1 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047052 LOG1 raft[0] presisiter term1 votefor0 loglen2
+047052 LOG1 raft[0] append newlog index:2  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047053 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047053 LOG1 raft[1] append the logs index from 1 to 2
+047053 LOG1 raft[1] presisiter term1 votefor0 loglen2
+047054 LOG1 raft[0] applier start firstIndex 0 commitIndex 2 lastApplied 1
+047054 LOG1 raft[0] applies entries 1-2 in term 1
+ctrler accept a command &{map[1:[x y z] 2:[a b c]] [] 0 0 0 Join 592695244429279899 0}
+047055 LOG1 raft[0] presisiter term1 votefor0 loglen3
+047056 LOG1 raft[0] append newlog index:3  term:1 | command : {Join 592695244429279899 0 map[1:[x y z] 2:[a b c]] [] 0 0 0}
+047056 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047057 LOG1 raft[1] append the logs index from 2 to 3
+047057 LOG1 raft[1] presisiter term1 votefor0 loglen3
+047057 LOG1 raft[0] applier start firstIndex 0 commitIndex 3 lastApplied 2
+047058 LOG1 raft[0] applies entries 2-3 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047059 LOG1 raft[0] presisiter term1 votefor0 loglen4
+047059 LOG1 raft[0] append newlog index:4  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047060 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047061 LOG1 raft[1] append the logs index from 3 to 4
+047061 LOG1 raft[1] presisiter term1 votefor0 loglen4
+047061 LOG1 raft[0] applier start firstIndex 0 commitIndex 4 lastApplied 3
+047061 LOG1 raft[0] applies entries 3-4 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047063 LOG1 raft[0] presisiter term1 votefor0 loglen5
+047063 LOG1 raft[0] append newlog index:5  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047064 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047064 LOG1 raft[1] append the logs index from 4 to 5
+047064 LOG1 raft[1] presisiter term1 votefor0 loglen5
+047064 LOG1 raft[0] applier start firstIndex 0 commitIndex 5 lastApplied 4
+047065 LOG1 raft[0] applies entries 4-5 in term 1
+ctrler accept a command &{map[3:[j k l]] [] 0 0 0 Join 592695244429279899 0}
+047066 LOG1 raft[0] presisiter term1 votefor0 loglen6
+047066 LOG1 raft[0] append newlog index:6  term:1 | command : {Join 592695244429279899 0 map[3:[j k l]] [] 0 0 0}
+047067 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047068 LOG1 raft[1] append the logs index from 5 to 6
+047048 LOG1 raft[2] presisiter term1 votefor0 loglen1
+047070 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047070 LOG1 raft[2] append the logs index from 1 to 6
+047071 LOG1 raft[2] presisiter term1 votefor0 loglen6
+047071 LOG1 raft[2] applier start firstIndex 0 commitIndex 5 lastApplied 0
+047072 LOG1 raft[1] presisiter term1 votefor0 loglen6
+047072 LOG1 raft[2] applies entries 0-5 in term 1
+047071 LOG1 raft[0] applier start firstIndex 0 commitIndex 6 lastApplied 5
+047072 LOG1 raft[0] applies entries 5-6 in term 1
+047072 LOG1 raft[1] applier start firstIndex 0 commitIndex 5 lastApplied 0
+047072 LOG1 raft[1] applies entries 0-5 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047074 LOG1 raft[0] presisiter term1 votefor0 loglen7
+047074 LOG1 raft[0] append newlog index:7  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047075 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047076 LOG1 raft[2] append the logs index from 6 to 7
+047076 LOG1 raft[2] presisiter term1 votefor0 loglen7
+047076 LOG1 raft[0] applier start firstIndex 0 commitIndex 7 lastApplied 6
+047076 LOG1 raft[0] applies entries 6-7 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047078 LOG1 raft[0] presisiter term1 votefor0 loglen8
+047078 LOG1 raft[0] append newlog index:8  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047079 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047079 LOG1 raft[2] append the logs index from 7 to 8
+047079 LOG1 raft[2] presisiter term1 votefor0 loglen8
+047079 LOG1 raft[0] applier start firstIndex 0 commitIndex 8 lastApplied 7
+047080 LOG1 raft[0] applies entries 7-8 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047081 LOG1 raft[0] presisiter term1 votefor0 loglen9
+047081 LOG1 raft[0] append newlog index:9  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047082 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047082 LOG1 raft[2] append the logs index from 8 to 9
+047082 LOG1 raft[2] presisiter term1 votefor0 loglen9
+047083 LOG1 raft[0] applier start firstIndex 0 commitIndex 9 lastApplied 8
+047083 LOG1 raft[0] applies entries 8-9 in term 1
+ctrler accept a command &{map[] [1 3] 0 0 0 Leave 592695244429279899 0}
+047084 LOG1 raft[0] presisiter term1 votefor0 loglen10
+047084 LOG1 raft[0] append newlog index:10  term:1 | command : {Leave 592695244429279899 0 map[] [1 3] 0 0 0}
+047085 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047086 LOG1 raft[2] append the logs index from 9 to 10
+047086 LOG1 raft[2] presisiter term1 votefor0 loglen10
+047086 LOG1 raft[0] applier start firstIndex 0 commitIndex 10 lastApplied 9
+047086 LOG1 raft[0] applies entries 9-10 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047088 LOG1 raft[0] presisiter term1 votefor0 loglen11
+047088 LOG1 raft[0] append newlog index:11  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047089 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047089 LOG1 raft[2] append the logs index from 10 to 11
+047089 LOG1 raft[2] presisiter term1 votefor0 loglen11
+047090 LOG1 raft[0] applier start firstIndex 0 commitIndex 11 lastApplied 10
+047090 LOG1 raft[0] applies entries 10-11 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047091 LOG1 raft[0] presisiter term1 votefor0 loglen12
+047091 LOG1 raft[0] append newlog index:12  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047092 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047092 LOG1 raft[2] append the logs index from 11 to 12
+047092 LOG1 raft[2] presisiter term1 votefor0 loglen12
+047093 LOG1 raft[0] applier start firstIndex 0 commitIndex 12 lastApplied 11
+047093 LOG1 raft[0] applies entries 11-12 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047094 LOG1 raft[0] presisiter term1 votefor0 loglen13
+047095 LOG1 raft[0] append newlog index:13  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047095 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047095 LOG1 raft[2] append the logs index from 12 to 13
+047096 LOG1 raft[2] presisiter term1 votefor0 loglen13
+047096 LOG1 raft[0] applier start firstIndex 0 commitIndex 13 lastApplied 12
+047096 LOG1 raft[0] applies entries 12-13 in term 1
+ctrler accept a command &{map[] [2] 0 0 0 Leave 592695244429279899 0}
+047098 LOG1 raft[0] presisiter term1 votefor0 loglen14
+047098 LOG1 raft[0] append newlog index:14  term:1 | command : {Leave 592695244429279899 0 map[] [2] 0 0 0}
+047098 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047099 LOG1 raft[2] append the logs index from 13 to 14
+047099 LOG1 raft[2] presisiter term1 votefor0 loglen14
+047099 LOG1 raft[0] applier start firstIndex 0 commitIndex 14 lastApplied 13
+047099 LOG1 raft[0] applies entries 13-14 in term 1
+  ... Passed
+Test: Concurrent multi leave/join ...
+ctrler accept a command &{map[1009:[1009a 1009b 1009c] 2009:[2009a] 3009:[3009a]] [] 0 0 0 Join 163160260782690256 0}
+ctrler accept a command &{map[1009:[1009a 1009b 1009c] 2009:[2009a] 3009:[3009a]] [] 0 0 0 Join 163160260782690256 0}
+ctrler accept a command &{map[1009:[1009a 1009b 1009c] 2009:[2009a] 3009:[3009a]] [] 0 0 0 Join 163160260782690256 0}
+047105 LOG1 raft[0] presisiter term1 votefor0 loglen15
+047105 LOG1 raft[0] append newlog index:15  term:1 | command : {Join 163160260782690256 0 map[1009:[1009a 1009b 1009c] 2009:[2009a] 3009:[3009a]] [] 0 0 0}
+047106 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047106 LOG1 raft[2] append the logs index from 14 to 15
+047106 LOG1 raft[2] presisiter term1 votefor0 loglen15
+047107 LOG1 raft[0] applier start firstIndex 0 commitIndex 15 lastApplied 14
+047107 LOG1 raft[0] applies entries 14-15 in term 1
+ctrler accept a command &{map[1003:[1003a 1003b 1003c] 2003:[2003a] 3003:[3003a]] [] 0 0 0 Join 2404978527396036470 0}
+ctrler accept a command &{map[1000:[1000a 1000b 1000c] 2000:[2000a] 3000:[3000a]] [] 0 0 0 Join 1250064046468864474 0}
+047109 LOG1 raft[0] presisiter term1 votefor0 loglen16
+047110 LOG1 raft[0] append newlog index:16  term:1 | command : {Join 1250064046468864474 0 map[1000:[1000a 1000b 1000c] 2000:[2000a] 3000:[3000a]] [] 0 0 0}
+ctrler accept a command &{map[1003:[1003a 1003b 1003c] 2003:[2003a] 3003:[3003a]] [] 0 0 0 Join 2404978527396036470 0}
+047110 LOG1 raft[0] presisiter term1 votefor0 loglen17
+047110 LOG1 raft[0] append newlog index:17  term:1 | command : {Join 2404978527396036470 0 map[1003:[1003a 1003b 1003c] 2003:[2003a] 3003:[3003a]] [] 0 0 0}
+047111 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047111 LOG1 raft[2] append the logs index from 15 to 16
+ctrler accept a command &{map[1001:[1001a 1001b 1001c] 2001:[2001a] 3001:[3001a]] [] 0 0 0 Join 87316791900320605 0}
+ctrler accept a command &{map[1001:[1001a 1001b 1001c] 2001:[2001a] 3001:[3001a]] [] 0 0 0 Join 87316791900320605 0}
+047113 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047113 LOG1 raft[1] append the logs index from 6 to 17
+047114 LOG1 raft[1] presisiter term1 votefor0 loglen17
+ctrler accept a command &{map[1002:[1002a 1002b 1002c] 2002:[2002a] 3002:[3002a]] [] 0 0 0 Join 4593468997781128288 0}
+047112 LOG1 raft[2] presisiter term1 votefor0 loglen16
+047114 LOG1 raft[0] applier start firstIndex 0 commitIndex 17 lastApplied 15
+047115 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047115 LOG1 raft[2] append the logs index from 16 to 17
+ctrler accept a command &{map[] [2003 3003] 0 0 0 Leave 2404978527396036470 0}
+047116 LOG1 raft[1] applier start firstIndex 0 commitIndex 15 lastApplied 5
+047116 LOG1 raft[2] presisiter term1 votefor0 loglen17
+047116 LOG1 raft[1] applies entries 5-15 in term 1
+ctrler accept a command &{map[1001:[1001a 1001b 1001c] 2001:[2001a] 3001:[3001a]] [] 0 0 0 Join 87316791900320605 0}
+ctrler accept a command &{map[] [2000 3000] 0 0 0 Leave 1250064046468864474 0}
+047122 LOG1 raft[2] applier start firstIndex 0 commitIndex 17 lastApplied 5
+047126 LOG1 raft[2] applies entries 5-17 in term 1
+047128 LOG1 raft[0] presisiter term1 votefor0 loglen18
+047128 LOG1 raft[0] append newlog index:18  term:1 | command : {Join 87316791900320605 0 map[1001:[1001a 1001b 1001c] 2001:[2001a] 3001:[3001a]] [] 0 0 0}
+047130 LOG1 raft[0] presisiter term1 votefor0 loglen19
+047130 LOG1 raft[0] append newlog index:19  term:1 | command : {Leave 1250064046468864474 0 map[] [2000 3000] 0 0 0}
+047130 LOG1 raft[0] applies entries 15-17 in term 1
+ctrler accept a command &{map[] [2009 3009] 0 0 0 Leave 163160260782690256 0}
+ctrler accept a command &{map[] [2009 3009] 0 0 0 Leave 163160260782690256 0}
+047132 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047133 LOG1 raft[2] append the logs index from 17 to 19
+047134 LOG1 raft[2] presisiter term1 votefor0 loglen19
+ctrler accept a command &{map[1005:[1005a 1005b 1005c] 2005:[2005a] 3005:[3005a]] [] 0 0 0 Join 3545093023331996962 0}
+047135 LOG1 raft[0] presisiter term1 votefor0 loglen20
+047135 LOG1 raft[0] append newlog index:20  term:1 | command : {Join 3545093023331996962 0 map[1005:[1005a 1005b 1005c] 2005:[2005a] 3005:[3005a]] [] 0 0 0}
+ctrler accept a command &{map[1006:[1006a 1006b 1006c] 2006:[2006a] 3006:[3006a]] [] 0 0 0 Join 4554484523628096525 0}
+ctrler accept a command &{map[] [2009 3009] 0 0 0 Leave 163160260782690256 0}
+ctrler accept a command &{map[1006:[1006a 1006b 1006c] 2006:[2006a] 3006:[3006a]] [] 0 0 0 Join 4554484523628096525 0}
+047138 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047138 LOG1 raft[2] append the logs index from 19 to 20
+047139 LOG1 raft[2] presisiter term1 votefor0 loglen20
+ctrler accept a command &{map[1006:[1006a 1006b 1006c] 2006:[2006a] 3006:[3006a]] [] 0 0 0 Join 4554484523628096525 0}
+ctrler accept a command &{map[1008:[1008a 1008b 1008c] 2008:[2008a] 3008:[3008a]] [] 0 0 0 Join 251364676113936911 0}
+ctrler accept a command &{map[1007:[1007a 1007b 1007c] 2007:[2007a] 3007:[3007a]] [] 0 0 0 Join 148096557983380241 0}
+ctrler accept a command &{map[] [2003 3003] 0 0 0 Leave 2404978527396036470 0}
+047140 LOG1 raft[2] applier start firstIndex 0 commitIndex 19 lastApplied 17
+047142 LOG1 raft[2] applies entries 17-19 in term 1
+ctrler accept a command &{map[1007:[1007a 1007b 1007c] 2007:[2007a] 3007:[3007a]] [] 0 0 0 Join 148096557983380241 0}
+ctrler accept a command &{map[1002:[1002a 1002b 1002c] 2002:[2002a] 3002:[3002a]] [] 0 0 0 Join 4593468997781128288 0}
+047140 LOG1 raft[0] applier start firstIndex 0 commitIndex 20 lastApplied 17
+ctrler accept a command &{map[1007:[1007a 1007b 1007c] 2007:[2007a] 3007:[3007a]] [] 0 0 0 Join 148096557983380241 0}
+ctrler accept a command &{map[1004:[1004a 1004b 1004c] 2004:[2004a] 3004:[3004a]] [] 0 0 0 Join 3866556264417922849 0}
+ctrler accept a command &{map[] [2001 3001] 0 0 0 Leave 87316791900320605 0}
+ctrler accept a command &{map[1004:[1004a 1004b 1004c] 2004:[2004a] 3004:[3004a]] [] 0 0 0 Join 3866556264417922849 0}
+047142 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047148 LOG1 raft[1] append the logs index from 17 to 20
+047148 LOG1 raft[1] presisiter term1 votefor0 loglen20
+047149 LOG1 raft[1] applier start firstIndex 0 commitIndex 19 lastApplied 15
+047146 LOG1 raft[0] presisiter term1 votefor0 loglen21
+047149 LOG1 raft[0] append newlog index:21  term:1 | command : {Join 148096557983380241 0 map[1007:[1007a 1007b 1007c] 2007:[2007a] 3007:[3007a]] [] 0 0 0}
+047150 LOG1 raft[0] presisiter term1 votefor0 loglen22
+047150 LOG1 raft[0] append newlog index:22  term:1 | command : {Join 4554484523628096525 0 map[1006:[1006a 1006b 1006c] 2006:[2006a] 3006:[3006a]] [] 0 0 0}
+047151 LOG1 raft[0] presisiter term1 votefor0 loglen23
+047151 LOG1 raft[0] append newlog index:23  term:1 | command : {Leave 163160260782690256 0 map[] [2009 3009] 0 0 0}
+047151 LOG1 raft[0] presisiter term1 votefor0 loglen24
+047152 LOG1 raft[0] append newlog index:24  term:1 | command : {Join 251364676113936911 0 map[1008:[1008a 1008b 1008c] 2008:[2008a] 3008:[3008a]] [] 0 0 0}
+ctrler accept a command &{map[] [2005 3005] 0 0 0 Leave 3545093023331996962 0}
+047152 LOG1 raft[0] presisiter term1 votefor0 loglen25
+047153 LOG1 raft[0] append newlog index:25  term:1 | command : {Leave 2404978527396036470 0 map[] [2003 3003] 0 0 0}
+047153 LOG1 raft[0] applies entries 17-20 in term 1
+047153 LOG1 raft[0] presisiter term1 votefor0 loglen26
+047154 LOG1 raft[0] append newlog index:26  term:1 | command : {Join 3866556264417922849 0 map[1004:[1004a 1004b 1004c] 2004:[2004a] 3004:[3004a]] [] 0 0 0}
+047155 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047155 LOG1 raft[2] append the logs index from 20 to 26
+047156 LOG1 raft[0] presisiter term1 votefor0 loglen27
+047156 LOG1 raft[0] append newlog index:27  term:1 | command : {Leave 3545093023331996962 0 map[] [2005 3005] 0 0 0}
+047155 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047156 LOG1 raft[1] append the logs index from 20 to 26
+047156 LOG1 raft[2] presisiter term1 votefor0 loglen26
+047157 LOG1 raft[1] presisiter term1 votefor0 loglen26
+047157 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047158 LOG1 raft[2] append the logs index from 26 to 27
+047158 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047158 LOG1 raft[2] presisiter term1 votefor0 loglen27
+047158 LOG1 raft[2] applier start firstIndex 0 commitIndex 26 lastApplied 19
+047158 LOG1 raft[0] applier start firstIndex 0 commitIndex 27 lastApplied 20
+047159 LOG1 raft[2] applies entries 19-26 in term 1
+ctrler accept a command &{map[] [2006 3006] 0 0 0 Leave 4554484523628096525 0}
+ctrler accept a command &{map[] [2007 3007] 0 0 0 Leave 148096557983380241 0}
+047158 LOG1 raft[1] append the logs index from 26 to 27
+047161 LOG1 raft[1] presisiter term1 votefor0 loglen27
+ctrler accept a command &{map[] [2008 3008] 0 0 0 Leave 251364676113936911 0}
+047162 LOG1 raft[0] presisiter term1 votefor0 loglen28
+047162 LOG1 raft[0] append newlog index:28  term:1 | command : {Leave 251364676113936911 0 map[] [2008 3008] 0 0 0}
+ctrler accept a command &{map[] [2006 3006] 0 0 0 Leave 4554484523628096525 0}
+047163 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047163 LOG1 raft[1] append the logs index from 27 to 28
+047164 LOG1 raft[1] presisiter term1 votefor0 loglen28
+ctrler accept a command &{map[] [2006 3006] 0 0 0 Leave 4554484523628096525 0}
+047165 LOG1 raft[0] presisiter term1 votefor0 loglen29
+047165 LOG1 raft[0] append newlog index:29  term:1 | command : {Leave 4554484523628096525 0 map[] [2006 3006] 0 0 0}
+047166 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047166 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047166 LOG1 raft[1] append the logs index from 28 to 29
+047166 LOG1 raft[2] append the logs index from 27 to 29
+047167 LOG1 raft[1] presisiter term1 votefor0 loglen29
+047167 LOG1 raft[0] applies entries 20-27 in term 1
+047167 LOG1 raft[0] applier start firstIndex 0 commitIndex 28 lastApplied 27
+ctrler accept a command &{map[] [2001 3001] 0 0 0 Leave 87316791900320605 0}
+047167 LOG1 raft[2] presisiter term1 votefor0 loglen29
+047170 LOG1 raft[0] applies entries 27-28 in term 1
+047170 LOG1 raft[0] applier start firstIndex 0 commitIndex 29 lastApplied 28
+047170 LOG1 raft[0] applies entries 28-29 in term 1
+ctrler accept a command &{map[] [2007 3007] 0 0 0 Leave 148096557983380241 0}
+ctrler accept a command &{map[] [2004 3004] 0 0 0 Leave 3866556264417922849 0}
+ctrler accept a command &{map[] [2007 3007] 0 0 0 Leave 148096557983380241 0}
+ctrler accept a command &{map[] [2004 3004] 0 0 0 Leave 3866556264417922849 0}
+047172 LOG1 raft[2] applier start firstIndex 0 commitIndex 28 lastApplied 26
+047172 LOG1 raft[0] presisiter term1 votefor0 loglen30
+047172 LOG1 raft[0] append newlog index:30  term:1 | command : {Leave 148096557983380241 0 map[] [2007 3007] 0 0 0}
+047172 LOG1 raft[2] applies entries 26-28 in term 1
+ctrler accept a command &{map[] [2001 3001] 0 0 0 Leave 87316791900320605 0}
+047174 LOG1 raft[1] applies entries 15-19 in term 1
+047174 LOG1 raft[1] applier start firstIndex 0 commitIndex 28 lastApplied 19
+047176 LOG1 raft[1] applies entries 19-28 in term 1
+047177 LOG1 raft[0] presisiter term1 votefor0 loglen31
+047177 LOG1 raft[0] append newlog index:31  term:1 | command : {Leave 3866556264417922849 0 map[] [2004 3004] 0 0 0}
+ctrler accept a command &{map[1002:[1002a 1002b 1002c] 2002:[2002a] 3002:[3002a]] [] 0 0 0 Join 4593468997781128288 0}
+047178 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047179 LOG1 raft[1] append the logs index from 29 to 31
+047178 LOG1 raft[0] presisiter term1 votefor0 loglen32
+047180 LOG1 raft[1] presisiter term1 votefor0 loglen31
+047180 LOG1 raft[0] append newlog index:32  term:1 | command : {Leave 87316791900320605 0 map[] [2001 3001] 0 0 0}
+047180 LOG1 raft[1] applier start firstIndex 0 commitIndex 29 lastApplied 28
+047180 LOG1 raft[1] applies entries 28-29 in term 1
+047181 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047181 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047181 LOG1 raft[0] applier start firstIndex 0 commitIndex 31 lastApplied 29
+047181 LOG1 raft[2] append the logs index from 29 to 32
+047182 LOG1 raft[2] presisiter term1 votefor0 loglen32
+047183 LOG1 raft[0] presisiter term1 votefor0 loglen33
+047183 LOG1 raft[0] append newlog index:33  term:1 | command : {Join 4593468997781128288 0 map[1002:[1002a 1002b 1002c] 2002:[2002a] 3002:[3002a]] [] 0 0 0}
+047183 LOG1 raft[0] applies entries 29-31 in term 1
+047183 LOG1 raft[0] applier start firstIndex 0 commitIndex 32 lastApplied 31
+047183 LOG1 raft[0] applies entries 31-32 in term 1
+047181 LOG1 raft[1] append the logs index from 31 to 32
+047183 LOG1 raft[2] applier start firstIndex 0 commitIndex 31 lastApplied 28
+047184 LOG1 raft[2] applies entries 28-31 in term 1
+047184 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047185 LOG1 raft[2] append the logs index from 32 to 33
+047185 LOG1 raft[1] presisiter term1 votefor0 loglen32
+047185 LOG1 raft[2] presisiter term1 votefor0 loglen33
+047186 LOG1 raft[2] applier start firstIndex 0 commitIndex 32 lastApplied 31
+047186 LOG1 raft[2] applies entries 31-32 in term 1
+047186 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047186 LOG1 raft[0] applier start firstIndex 0 commitIndex 33 lastApplied 32
+047186 LOG1 raft[0] applies entries 32-33 in term 1
+047186 LOG1 raft[1] append the logs index from 32 to 33
+047187 LOG1 raft[1] presisiter term1 votefor0 loglen33
+047188 LOG1 raft[1] applier start firstIndex 0 commitIndex 32 lastApplied 29
+ctrler accept a command &{map[] [2002 3002] 0 0 0 Leave 4593468997781128288 0}
+047188 LOG1 raft[1] applies entries 29-32 in term 1
+ctrler accept a command &{map[] [2002 3002] 0 0 0 Leave 4593468997781128288 0}
+ctrler accept a command &{map[] [2002 3002] 0 0 0 Leave 4593468997781128288 0}
+047192 LOG1 raft[0] presisiter term1 votefor0 loglen34
+047192 LOG1 raft[0] append newlog index:34  term:1 | command : {Leave 4593468997781128288 0 map[] [2002 3002] 0 0 0}
+047193 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047193 LOG1 raft[2] append the logs index from 33 to 34
+047194 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047194 LOG1 raft[1] append the logs index from 33 to 34
+047194 LOG1 raft[2] presisiter term1 votefor0 loglen34
+047195 LOG1 raft[1] presisiter term1 votefor0 loglen34
+047195 LOG1 raft[1] applier start firstIndex 0 commitIndex 33 lastApplied 32
+047195 LOG1 raft[1] applies entries 32-33 in term 1
+047196 LOG1 raft[0] applier start firstIndex 0 commitIndex 34 lastApplied 33
+047196 LOG1 raft[0] applies entries 33-34 in term 1
+047196 LOG1 raft[2] applier start firstIndex 0 commitIndex 33 lastApplied 32
+047196 LOG1 raft[2] applies entries 32-33 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047198 LOG1 raft[0] presisiter term1 votefor0 loglen35
+047198 LOG1 raft[0] append newlog index:35  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047199 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047199 LOG1 raft[2] append the logs index from 34 to 35
+047200 LOG1 raft[2] presisiter term1 votefor0 loglen35
+047201 LOG1 raft[0] applier start firstIndex 0 commitIndex 35 lastApplied 34
+047201 LOG1 raft[0] applies entries 34-35 in term 1
+  ... Passed
+Test: Minimal transfers after multijoins ...
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047203 LOG1 raft[0] presisiter term1 votefor0 loglen36
+047203 LOG1 raft[0] append newlog index:36  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047204 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047204 LOG1 raft[2] append the logs index from 35 to 36
+047205 LOG1 raft[2] presisiter term1 votefor0 loglen36
+047206 LOG1 raft[0] applier start firstIndex 0 commitIndex 36 lastApplied 35
+047206 LOG1 raft[0] applies entries 35-36 in term 1
+ctrler accept a command &{map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b]] [] 0 0 0 Join 592695244429279899 0}
+047208 LOG1 raft[0] presisiter term1 votefor0 loglen37
+047208 LOG1 raft[0] append newlog index:37  term:1 | command : {Join 592695244429279899 0 map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b]] [] 0 0 0}
+047209 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047209 LOG1 raft[2] append the logs index from 36 to 37
+047210 LOG1 raft[2] presisiter term1 votefor0 loglen37
+047210 LOG1 raft[0] applier start firstIndex 0 commitIndex 37 lastApplied 36
+047210 LOG1 raft[0] applies entries 36-37 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047212 LOG1 raft[0] presisiter term1 votefor0 loglen38
+047212 LOG1 raft[0] append newlog index:38  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047214 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047215 LOG1 raft[2] append the logs index from 37 to 38
+047216 LOG1 raft[2] presisiter term1 votefor0 loglen38
+047216 LOG1 raft[0] applier start firstIndex 0 commitIndex 38 lastApplied 37
+047216 LOG1 raft[0] applies entries 37-38 in term 1
+047223 LOG1 raft[2] applier start firstIndex 0 commitIndex 37 lastApplied 33
+047225 LOG1 raft[2] applies entries 33-37 in term 1
+047228 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047228 LOG1 raft[1] append the logs index from 34 to 38
+047229 LOG1 raft[1] presisiter term1 votefor0 loglen38
+047230 LOG1 raft[1] applier start firstIndex 0 commitIndex 38 lastApplied 33
+047231 LOG1 raft[1] applies entries 33-38 in term 1
+  ... Passed
+Test: Minimal transfers after multileaves ...
+ctrler accept a command &{map[] [11 12 13 14 15] 0 0 0 Leave 592695244429279899 0}
+047235 LOG1 raft[0] presisiter term1 votefor0 loglen39
+047236 LOG1 raft[0] append newlog index:39  term:1 | command : {Leave 592695244429279899 0 map[] [11 12 13 14 15] 0 0 0}
+047237 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047237 LOG1 raft[2] append the logs index from 38 to 39
+047238 LOG1 term : 1 | raft[1] accept the appendentry from raft[0]
+047238 LOG1 raft[1] append the logs index from 38 to 39
+047238 LOG1 raft[2] presisiter term1 votefor0 loglen39
+047240 LOG1 raft[2] applier start firstIndex 0 commitIndex 38 lastApplied 37
+047240 LOG1 raft[2] applies entries 37-38 in term 1
+047240 LOG1 raft[0] applier start firstIndex 0 commitIndex 39 lastApplied 38
+047240 LOG1 raft[0] applies entries 38-39 in term 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047242 LOG1 raft[0] presisiter term1 votefor0 loglen40
+047242 LOG1 raft[0] append newlog index:40  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047243 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047243 LOG1 raft[2] append the logs index from 39 to 40
+047244 LOG1 raft[2] presisiter term1 votefor0 loglen40
+047245 LOG1 raft[0] applier start firstIndex 0 commitIndex 40 lastApplied 39
+047245 LOG1 raft[0] applies entries 39-40 in term 1
+  ... Passed
+Test: Check Same config on servers ...
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+047247 LOG1 raft[0] presisiter term1 votefor0 loglen41
+047247 LOG1 raft[0] append newlog index:41  term:1 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+047247 LOG1 term : 1 | raft[2] accept the appendentry from raft[0]
+047248 LOG1 raft[2] append the logs index from 40 to 41
+047248 LOG1 raft[2] presisiter term1 votefor0 loglen41
+047249 LOG1 raft[0] applier start firstIndex 0 commitIndex 41 lastApplied 40
+047249 LOG1 raft[0] applies entries 40-41 in term 1
+047249 LOG1 raft[2] applier start firstIndex 0 commitIndex 40 lastApplied 38
+047250 LOG1 raft[2] applies entries 38-40 in term 1
+047250 LOG1 raft[1] presisiter term1 votefor0 loglen39
+047705 LOG1 state 0 Term 4 | raft[1] election timeout
+047705 LOG1 Term 4 | raft[1] convert from 0 to 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+049152 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+050604 LOG1 state 0 Term 4 | raft[2] election timeout
+050605 LOG1 Term 4 | raft[2] convert from 0 to 1
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+052529 LOG1 state 0 Term 1 | raft[2] election timeout
+052529 LOG1 Term 1 | raft[2] convert from 0 to 1
+052531 LOG1 raft[2] presisiter term2 votefor2 loglen41
+052531 LOG1  term : 2 | raft[2][state : 1] start a election 
+052531 LOG1 vote for self raft[2]
+052531 LOG1 raft[2] sent requestvote to raft[1]
+052531 LOG1 raft[2] sent requestvote to raft[0]
+052532 LOG1 term : 1 | raft[1] accept the requestvote from raft[2]
+052532 LOG1 term : 2 | raft[1] (lastlogterm 1 lastlogindex 39)accept the requestvote from raft[8] (lastlogterm 1 lastlogindex 41) 
+052533 LOG1 raft[1] presisiter term2 votefor2 loglen39
+052534 LOG1 Term 2 | raft[2] convert from 1 to 2
+052534 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[0]
+052534 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[1]
+052535 LOG1 term : 2 | raft[1] accept the heartbeat from raft[2]
+052536 LOG1 raft[1] presisiter term2 votefor2 loglen39
+ctrler accept a command &{map[] [] 0 0 -1 Query 592695244429279899 0}
+053150 LOG1 raft[2] presisiter term2 votefor2 loglen42
+053150 LOG1 raft[2] append newlog index:42  term:2 | command : {Query 592695244429279899 0 map[] [] 0 0 -1}
+053151 LOG1 term : 2 | raft[1] accept the appendentry from raft[2]
+053152 LOG1 raft[1] append the logs index from 39 to 42
+053153 LOG1 raft[1] presisiter term2 votefor2 loglen42
+053153 LOG1 raft[1] applier start firstIndex 0 commitIndex 40 lastApplied 38
+053154 LOG1 raft[1] applies entries 38-40 in term 2
+053154 LOG1 raft[2] applier start firstIndex 0 commitIndex 42 lastApplied 40
+  ... Passed
+PASS
+ok  	6.5840/shardctrler	5.318s

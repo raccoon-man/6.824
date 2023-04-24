@@ -7,9 +7,15 @@ import (
 	"log"
 	"sync"
 	"sync/atomic"
+	"time"
+	"bytes"
 )
 
 const Debug = false
+const GetOp = "Get"
+const PutOp = "Put"
+const AppendOp = "Append"
+
 
 func DPrintf(format string, a ...interface{}) (n int, err error) {
 	if Debug {
@@ -23,7 +29,15 @@ type Op struct {
 	// Your definitions here.
 	// Field names must start with capital letters,
 	// otherwise RPC will break.
+	Command string
+	Key string
+	Value string
+
+	ClientId int64
+	RequestId int
 }
+
+
 
 type KVServer struct {
 	mu      sync.Mutex
@@ -33,17 +47,212 @@ type KVServer struct {
 	dead    int32 // set by Kill()
 
 	maxraftstate int // snapshot if log grows this big
-
+	lastApplied int
 	// Your definitions here.
+	lastOperations map[int64]int
+	notifyChans map[int]chan Notification
+
+	DB map[string]string
 }
 
+type Notification struct {
+	ClientId  int64
+	RequestId int
+}
+
+func (kv *KVServer) shouldSnapshot() bool {
+	if kv.maxraftstate == -1 {
+		return false 
+	}
+	
+	if kv.rf.GetRaftStateSize() >= kv.maxraftstate{
+		return true
+	}
+	return false
+}
+
+func (kv *KVServer) takeSnapShot() {
+	w := new(bytes.Buffer)
+	e := labgob.NewEncoder(w)
+	kv.mu.Lock()
+	e.Encode(kv.DB)
+	e.Encode(kv.lastOperations)
+	lastApplied := kv.lastApplied
+	kv.mu.Unlock()
+	log.Printf("kv takesnapshot ***********")
+	kv.rf.Snapshot(lastApplied, w.Bytes())
+}
+
+func (kv *KVServer) isDuplicateRequest(clinetId int64, requestId int) bool  {
+	appliedRequestId, ok := kv.lastOperations[clinetId]
+	if ok == false || requestId > appliedRequestId {
+		return false 
+	}
+	return true
+}
+
+func (kv *KVServer) waitApplying(op Op, timeout time.Duration) bool {
+	//log.Printf("waitapply start")
+	index, _, isleader := kv.rf.Start(op)
+	//log.Printf("isleader %v index %d", isleader, index)
+	if isleader == false {
+		return true
+	}
+
+	if kv.shouldSnapshot() {
+		kv.takeSnapShot()
+	}
+
+	var WrongLeader bool 
+
+	kv.mu.Lock()
+	if _, ok := kv.notifyChans[index]; !ok {
+		kv.notifyChans[index] = make(chan Notification, 1)
+	}
+	ch := kv.notifyChans[index]
+	kv.mu.Unlock()
+
+	select{
+	case notify := <-ch:
+		if notify.ClientId != op.ClientId || notify.RequestId != op.RequestId {
+			WrongLeader = true
+		}else {
+			WrongLeader = false
+		}
+
+	case <- time.After(timeout):
+		kv.mu.Lock()
+		if kv.isDuplicateRequest(op.ClientId, op.RequestId){
+			WrongLeader = false
+		}else {
+			WrongLeader = true
+		}
+		kv.mu.Unlock()
+	}
+
+	kv.mu.Lock()
+	delete(kv.notifyChans, index)
+	kv.mu.Unlock()
+	return WrongLeader
+}
 
 func (kv *KVServer) Get(args *GetArgs, reply *GetReply) {
-	// Your code here.
+
+	op := Op{
+		Command : GetOp,
+		Key : args.Key,
+		Value : "",
+		ClientId : args.ClientId,
+		RequestId : args.RequestId,
+	}
+	
+	WrongLeader := kv.waitApplying(op, 500*time.Millisecond)
+
+	if WrongLeader == false {
+		kv.mu.Lock()
+		value, ok := kv.DB[args.Key]
+		kv.mu.Unlock()
+		if ok {
+			reply.Value = value
+			return
+		}
+		reply.Err = ErrNoKey
+	} else {
+		reply.Err = ErrWrongLeader
+	}
+	
+	//log.Printf("client %d get Get reply %v", args.ClientId, reply)
+	
 }
 
 func (kv *KVServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) {
-	// Your code here.
+	op := Op{
+		Command : args.Op,
+		Key : args.Key,
+		Value : args.Value,
+		ClientId : args.ClientId,
+		RequestId : args.RequestId,
+	}
+	
+	WrongLeader := kv.waitApplying(op, 500*time.Millisecond)
+	if WrongLeader{
+		reply.Err = ErrWrongLeader
+	}
+	//log.Printf("client %d get putappend reply %v", args.ClientId, reply)
+}
+
+func (kv *KVServer) applier() {
+	for kv.killed() == false {
+		select {
+		case msg := <- kv.applyCh:
+			
+			if msg.CommandValid {
+				log.Printf("raft[%d] try to apply message %v | kv.lastapplied %d msg command index %d", kv.rf.Me(), msg, kv.lastApplied, msg.CommandIndex)
+				kv.mu.Lock()
+				if msg.CommandIndex <= kv.lastApplied {
+					log.Printf("outdated message %v", msg)
+					kv.mu.Unlock()
+					continue
+				}
+				kv.lastApplied = msg.CommandIndex
+
+				op := msg.Command.(Op)
+				if op.Command != GetOp && kv.isDuplicateRequest(op.ClientId, op.RequestId){
+					log.Printf("duplicate message %v", msg)
+					kv.mu.Unlock()
+					continue
+				} 
+				switch op.Command {
+				case "Put":
+					kv.DB[op.Key] = op.Value
+				case "Append":
+					kv.DB[op.Key] += op.Value
+					//log.Printf("kv %d DB[0] len %d", kv.me, len(kv.DB["0"]))
+				}
+				kv.lastApplied = msg.CommandIndex
+				kv.lastOperations[op.ClientId] = op.RequestId
+
+				if ch, ok := kv.notifyChans[msg.CommandIndex]; ok {
+					notify := Notification{
+						ClientId : op.ClientId,
+						RequestId : op.RequestId,
+					}
+					ch <- notify
+				}
+
+				kv.mu.Unlock()
+				if kv.shouldSnapshot() {
+					kv.takeSnapShot()
+				}
+			
+			} else if msg.SnapshotValid{
+				//log.Printf("raft[%d] try to apply snapshot msg  ^_^", kv.rf.Me())
+				kv.InstallSnapshot(msg.Snapshot)
+				//log.Printf("%s", kv.DB["0"])
+			} else {
+				log.Printf("unexpected message")
+			}
+		
+		}
+	}
+}
+
+func (kv *KVServer) InstallSnapshot(snapshot []byte) {
+	if snapshot != nil {
+		r := bytes.NewBuffer(snapshot)
+		d := labgob.NewDecoder(r)
+		var db map[string]string
+		var lastop map[int64]int
+		if d.Decode(&db) != nil || d.Decode(&lastop) != nil {
+			log.Printf("kvsever %d fail to recover", kv.me)
+		}else {
+			kv.mu.Lock()
+			kv.DB = db
+			kv.lastOperations = lastop
+			kv.mu.Unlock()
+			log.Printf("kvsever %d success to recover", kv.me)
+		}
+	} 
 }
 
 // the tester calls Kill() when a KVServer instance won't
@@ -85,13 +294,17 @@ func StartKVServer(servers []*labrpc.ClientEnd, me int, persister *raft.Persiste
 	kv := new(KVServer)
 	kv.me = me
 	kv.maxraftstate = maxraftstate
-
+	kv.DB = make(map[string]string)
+	kv.lastOperations = make(map[int64]int)
+	kv.notifyChans = make(map[int]chan Notification)
 	// You may need initialization code here.
-
 	kv.applyCh = make(chan raft.ApplyMsg)
 	kv.rf = raft.Make(servers, me, persister, kv.applyCh)
 
-	// You may need initialization code here.
+	snapshot := persister.ReadSnapshot()
+	kv.InstallSnapshot(snapshot)
 
+	// You may need initialization code here.
+	go kv.applier()
 	return kv
 }

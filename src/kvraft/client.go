@@ -3,12 +3,17 @@ package kvraft
 import "6.5840/labrpc"
 import "crypto/rand"
 import "math/big"
-
+//import "log"
 
 type Clerk struct {
 	servers []*labrpc.ClientEnd
 	// You will have to modify this struct.
+	leaderId int
+	clientId int64
+	requestId int
 }
+
+
 
 func nrand() int64 {
 	max := big.NewInt(int64(1) << 62)
@@ -21,6 +26,10 @@ func MakeClerk(servers []*labrpc.ClientEnd) *Clerk {
 	ck := new(Clerk)
 	ck.servers = servers
 	// You'll have to add code here.
+	ck.leaderId = 0
+	ck.clientId = nrand()
+	ck.requestId = 0
+
 	return ck
 }
 
@@ -36,8 +45,19 @@ func MakeClerk(servers []*labrpc.ClientEnd) *Clerk {
 // arguments. and reply must be passed as a pointer.
 func (ck *Clerk) Get(key string) string {
 
-	// You will have to modify this function.
-	return ""
+	args := GetArgs{}
+	args.ClientId, args.RequestId = ck.clientId, ck.requestId
+	args.Key = key
+	//log.Printf("client %d send a Get", ck.clientId)
+	for {
+		reply := GetReply{}
+		if !ck.servers[ck.leaderId].Call("KVServer.Get", &args, &reply) || reply.Err == ErrWrongLeader || reply.Err == ErrTimeout  {
+			ck.leaderId = (ck.leaderId + 1) % len(ck.servers)
+			continue
+		}
+		ck.requestId ++ 
+		return reply.Value
+	}
 }
 
 // shared by Put and Append.
@@ -50,6 +70,19 @@ func (ck *Clerk) Get(key string) string {
 // arguments. and reply must be passed as a pointer.
 func (ck *Clerk) PutAppend(key string, value string, op string) {
 	// You will have to modify this function.
+	args := PutAppendArgs{}
+	args.ClientId, args.RequestId = ck.clientId, ck.requestId
+	args.Key, args.Value, args.Op = key, value, op
+	for {
+		reply := PutAppendReply{}
+		//log.Printf("client %d send a PutAppend", ck.clientId)
+		if !ck.servers[ck.leaderId].Call("KVServer.PutAppend", &args, &reply) || reply.Err == ErrWrongLeader || reply.Err == ErrTimeout  {
+			ck.leaderId = (ck.leaderId + 1) % len(ck.servers)
+			continue
+		}
+		ck.requestId ++ 
+		return
+	}
 }
 
 func (ck *Clerk) Put(key string, value string) {

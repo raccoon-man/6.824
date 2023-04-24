@@ -10,6 +10,7 @@ import "sync/atomic"
 import "sync"
 import "math/rand"
 import "io/ioutil"
+//import "log"
 
 const linearizabilityCheckTimeout = 1 * time.Second
 
@@ -26,12 +27,12 @@ func TestStaticShards(t *testing.T) {
 
 	cfg := make_config(t, 3, false, -1)
 	defer cfg.cleanup()
-
+	
 	ck := cfg.makeClient()
 
 	cfg.join(0)
 	cfg.join(1)
-
+	
 	n := 10
 	ka := make([]string, n)
 	va := make([]string, n)
@@ -40,10 +41,11 @@ func TestStaticShards(t *testing.T) {
 		va[i] = randstring(20)
 		ck.Put(ka[i], va[i])
 	}
+	//fmt.Printf("^^^^^^^^^^^^^^^^^^^^test file | Put completed\n*******************************\n*******************************\n")
 	for i := 0; i < n; i++ {
 		check(t, ck, ka[i], va[i])
 	}
-
+	//fmt.Printf("^^^^^^^^^^^^^^^^^^^^test file |	check completed\n*******************************\n*******************************\n")
 	// make sure that the data really is sharded by
 	// shutting down one shard and checking that some
 	// Get()s don't succeed.
@@ -62,7 +64,7 @@ func TestStaticShards(t *testing.T) {
 			}
 		}(xi)
 	}
-
+	//fmt.Printf("^^^^^^^^^^^^^^^^^^^^test file | shut shard get dont succeed\n*******************************\n*******************************\n")
 	// wait a bit, only about half the Gets should succeed.
 	ndone := 0
 	done := false

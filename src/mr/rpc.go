@@ -22,6 +22,19 @@ type ExampleReply struct {
 	Y int
 }
 
+type AskForTaskArgs struct {
+	WorkerId string
+	PreviousTaskTpye string
+	PreviousTaskIndex int
+}
+
+type AskForTaskReply struct {
+	TaskType string 
+	TaskIndex int
+	MapInputFileName string
+	ReduceTaskNumber int
+	MapTaskNumber int
+}
 // Add your RPC definitions here.
 
 

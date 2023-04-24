@@ -14,9 +14,25 @@ const (
 	ErrNoKey       = "ErrNoKey"
 	ErrWrongGroup  = "ErrWrongGroup"
 	ErrWrongLeader = "ErrWrongLeader"
+	ErrTimeout     = "ErrTimeout"
+	ErrNotReady    = "ErrNotReady"
+	ErrOutDate     = "ErrOutDate"
 )
 
 type Err string
+
+type CommandArgs struct {
+	Key string
+	Value string
+	Op string
+	ClientId int64
+	CommandId int
+}
+
+type CommandReply struct {
+	Err Err
+	Value string
+}
 
 // Put or Append
 type PutAppendArgs struct {

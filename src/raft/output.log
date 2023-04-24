@@ -1,0 +1,976 @@
+Test (2A): initial election ...
+006183 LOG1 state 0 Term 0 | raft[0] election timeout
+006184 LOG1 Term 0 | raft[0] convert from 0 to 1
+006186 LOG1 raft[0] presisiter term1 votefor0 loglen0
+006186 LOG1  term : 1 | raft[0][state : 1] start a election 
+006186 LOG1 vote for self raft[0]
+006186 LOG1 raft[0] sent requestvote to raft[2]
+006188 LOG1 term : 0 | raft[2] accept the requestvote from raft[0]
+006188 LOG1 term : 1 | raft[2] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+006188 LOG1 raft[2] presisiter term1 votefor0 loglen0
+006189 LOG1 Term 1 | raft[0] convert from 1 to 2
+006189 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+006189 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+006190 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+006190 LOG1 raft[2] presisiter term1 votefor0 loglen0
+006191 LOG1 raft[0] sent requestvote to raft[1]
+006192 LOG1 term : 0 | raft[1] accept the requestvote from raft[0]
+006192 LOG1 term : 1 | raft[1] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+006193 LOG1 raft[1] presisiter term1 votefor0 loglen0
+006194 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+006195 LOG1 raft[1] presisiter term1 votefor0 loglen0
+009190 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+009191 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+009191 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+009193 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+009193 LOG1 raft[2] presisiter term1 votefor0 loglen0
+009195 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+009196 LOG1 raft[1] presisiter term1 votefor0 loglen0
+012192 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+012193 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+012193 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+012196 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+012196 LOG1 raft[1] presisiter term1 votefor0 loglen0
+012197 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+012197 LOG1 raft[2] presisiter term1 votefor0 loglen0
+015194 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+015195 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+015195 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+015197 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+015197 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+015198 LOG1 raft[1] presisiter term1 votefor0 loglen0
+015198 LOG1 raft[2] presisiter term1 votefor0 loglen0
+018196 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+018196 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+018196 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+018198 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+018199 LOG1 raft[2] presisiter term1 votefor0 loglen0
+018199 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+018199 LOG1 raft[1] presisiter term1 votefor0 loglen0
+021198 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+021198 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+021198 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+021201 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+021201 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+021201 LOG1 raft[1] presisiter term1 votefor0 loglen0
+021201 LOG1 raft[2] presisiter term1 votefor0 loglen0
+024199 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+024200 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+024200 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+024202 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+024202 LOG1 raft[1] presisiter term1 votefor0 loglen0
+024202 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+024203 LOG1 raft[2] presisiter term1 votefor0 loglen0
+027201 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+027201 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+027202 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+027205 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+027205 LOG1 raft[1] presisiter term1 votefor0 loglen0
+027205 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+027206 LOG1 raft[2] presisiter term1 votefor0 loglen0
+030203 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+030203 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+030203 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+030206 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+030206 LOG1 raft[2] presisiter term1 votefor0 loglen0
+030206 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+030207 LOG1 raft[1] presisiter term1 votefor0 loglen0
+033205 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+033205 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+033205 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+033207 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+033207 LOG1 raft[2] presisiter term1 votefor0 loglen0
+033208 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+033208 LOG1 raft[1] presisiter term1 votefor0 loglen0
+  ... Passed --   3.6  3   22    5756    0
+Test (2A): election after network failure ...
+036206 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+040099 LOG1 state 0 Term 1 | raft[1] election timeout
+040100 LOG1 Term 1 | raft[1] convert from 0 to 1
+041158 LOG1 state 0 Term 1 | raft[2] election timeout
+041159 LOG1 Term 1 | raft[2] convert from 0 to 1
+041202 LOG1 state 0 Term 0 | raft[0] election timeout
+041202 LOG1 Term 0 | raft[0] convert from 0 to 1
+041203 LOG1 raft[0] presisiter term1 votefor0 loglen0
+041203 LOG1  term : 1 | raft[0][state : 1] start a election 
+041203 LOG1 vote for self raft[0]
+041203 LOG1 raft[0] sent requestvote to raft[2]
+041204 LOG1 raft[0] sent requestvote to raft[1]
+041205 LOG1 term : 0 | raft[2] accept the requestvote from raft[0]
+041205 LOG1 term : 1 | raft[2] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+041205 LOG1 raft[2] presisiter term1 votefor0 loglen0
+041206 LOG1 term : 0 | raft[1] accept the requestvote from raft[0]
+041206 LOG1 term : 1 | raft[1] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+041206 LOG1 Term 1 | raft[0] convert from 1 to 2
+041206 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+041206 LOG1 raft[1] presisiter term1 votefor0 loglen0
+041206 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+041208 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+041208 LOG1 raft[2] presisiter term1 votefor0 loglen0
+041209 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+041209 LOG1 raft[1] presisiter term1 votefor0 loglen0
+044208 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+044209 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+044209 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+044211 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+044211 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+044212 LOG1 raft[2] presisiter term1 votefor0 loglen0
+044212 LOG1 raft[1] presisiter term1 votefor0 loglen0
+047210 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+047210 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+047210 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+050212 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+050212 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+050212 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+051303 LOG1 state 0 Term 1 | raft[1] election timeout
+051303 LOG1 Term 1 | raft[1] convert from 0 to 1
+051304 LOG1 raft[1] presisiter term2 votefor1 loglen0
+051304 LOG1  term : 2 | raft[1][state : 1] start a election 
+051304 LOG1 vote for self raft[1]
+051304 LOG1 raft[1] sent requestvote to raft[2]
+051305 LOG1 term : 1 | raft[2] accept the requestvote from raft[1]
+051306 LOG1 term : 2 | raft[2] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+051306 LOG1 raft[2] presisiter term2 votefor1 loglen0
+051306 LOG1 raft[1] sent requestvote to raft[0]
+051306 LOG1 Term 2 | raft[1] convert from 1 to 2
+051307 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+051307 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+051308 LOG1 term : 2 | raft[2] accept the heartbeat from raft[1]
+051308 LOG1 raft[2] presisiter term2 votefor1 loglen0
+053213 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+053214 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+053214 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+054308 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+054308 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+054308 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+054310 LOG1 term : 2 | raft[2] accept the heartbeat from raft[1]
+054311 LOG1 raft[2] presisiter term2 votefor1 loglen0
+056215 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+056216 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+056216 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+056217 LOG1 term : 2 | raft[2] accept the heartbeat from raft[0]
+056218 LOG1 raft[2] presisiter term2 votefor1 loglen0
+056220 LOG1 term : 2 | raft[1] accept the heartbeat from raft[0]
+056220 LOG1 raft[1] presisiter term2 votefor1 loglen0
+057309 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+057310 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+057310 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+057312 LOG1 term : 2 | raft[2] accept the heartbeat from raft[1]
+057313 LOG1 raft[2] presisiter term2 votefor1 loglen0
+057315 LOG1 term : 1 | raft[0] accept the heartbeat from raft[1]
+057315 LOG1 term : 1 | raft[0] start follower convert
+057315 LOG1 Term 1 | raft[0] convert from 2 to 0
+057316 LOG1 raft[0] presisiter term2 votefor-1 loglen0
+060311 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+060312 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+060312 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+060314 LOG1 term : 2 | raft[2] accept the heartbeat from raft[1]
+060314 LOG1 raft[2] presisiter term2 votefor1 loglen0
+060314 LOG1 term : 2 | raft[0] accept the heartbeat from raft[1]
+060315 LOG1 raft[0] presisiter term2 votefor-1 loglen0
+063313 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+063314 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+063314 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+066315 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+066315 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+066316 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+066926 LOG1 state 0 Term 2 | raft[0] election timeout
+066926 LOG1 Term 2 | raft[0] convert from 0 to 1
+066927 LOG1 raft[0] presisiter term3 votefor0 loglen0
+066927 LOG1  term : 3 | raft[0][state : 1] start a election 
+066927 LOG1 vote for self raft[0]
+066927 LOG1 raft[0] sent requestvote to raft[2]
+066928 LOG1 raft[0] sent requestvote to raft[1]
+068406 LOG1 state 0 Term 2 | raft[2] election timeout
+068406 LOG1 Term 2 | raft[2] convert from 0 to 1
+068407 LOG1 raft[2] presisiter term3 votefor2 loglen0
+068407 LOG1  term : 3 | raft[2][state : 1] start a election 
+068407 LOG1 vote for self raft[2]
+068407 LOG1 raft[2] sent requestvote to raft[1]
+068407 LOG1 raft[2] sent requestvote to raft[0]
+069317 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+069317 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+069317 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+072319 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+072319 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+072319 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+073817 LOG1 state 1 Term 3 | raft[2] election timeout
+073818 LOG1 raft[2] presisiter term4 votefor2 loglen0
+073819 LOG1  term : 4 | raft[2][state : 1] start a election 
+073819 LOG1 vote for self raft[2]
+073819 LOG1 raft[2] sent requestvote to raft[1]
+073819 LOG1 raft[2] sent requestvote to raft[0]
+074538 LOG1 state 1 Term 3 | raft[0] election timeout
+074538 LOG1 raft[0] presisiter term4 votefor0 loglen0
+074539 LOG1  term : 4 | raft[0][state : 1] start a election 
+074539 LOG1 vote for self raft[0]
+074539 LOG1 raft[0] sent requestvote to raft[2]
+074539 LOG1 raft[0] sent requestvote to raft[1]
+075320 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+075321 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+075321 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+078322 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+078323 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+078323 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+079730 LOG1 state 1 Term 4 | raft[2] election timeout
+079730 LOG1 raft[2] presisiter term5 votefor2 loglen0
+079731 LOG1  term : 5 | raft[2][state : 1] start a election 
+079731 LOG1 vote for self raft[2]
+079731 LOG1 raft[2] sent requestvote to raft[1]
+079731 LOG1 raft[2] sent requestvote to raft[0]
+080949 LOG1 state 1 Term 4 | raft[0] election timeout
+080950 LOG1 raft[0] presisiter term5 votefor0 loglen0
+080950 LOG1  term : 5 | raft[0][state : 1] start a election 
+080950 LOG1 vote for self raft[0]
+080950 LOG1 raft[0] sent requestvote to raft[2]
+080951 LOG1 raft[0] sent requestvote to raft[1]
+080952 LOG1 term : 5 | raft[2] accept the requestvote from raft[0]
+080953 LOG1 raft[2] presisiter term5 votefor2 loglen0
+081324 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+081325 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+081325 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+084326 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+084326 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+084326 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+085781 LOG1 state 1 Term 5 | raft[2] election timeout
+085782 LOG1 raft[2] presisiter term6 votefor2 loglen0
+085783 LOG1  term : 6 | raft[2][state : 1] start a election 
+085783 LOG1 vote for self raft[2]
+085783 LOG1 raft[2] sent requestvote to raft[1]
+085783 LOG1 raft[2] sent requestvote to raft[0]
+085785 LOG1 term : 5 | raft[0] accept the requestvote from raft[2]
+085785 LOG1 Term 5 | raft[0] convert from 1 to 0
+085786 LOG1 term : 6 | raft[0] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+085786 LOG1 raft[0] presisiter term6 votefor2 loglen0
+085787 LOG1 Term 6 | raft[2] convert from 1 to 2
+085787 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[0]
+085787 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[1]
+085789 LOG1 term : 6 | raft[0] accept the heartbeat from raft[2]
+085790 LOG1 raft[0] presisiter term6 votefor2 loglen0
+087327 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+087328 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+087328 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+088788 LOG1 Term 6 state : 2 | raft[2] heartbeat timeout
+088789 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[0]
+088789 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[1]
+088792 LOG1 term : 6 | raft[0] accept the heartbeat from raft[2]
+088792 LOG1 raft[0] presisiter term6 votefor2 loglen0
+090329 LOG1 Term 2 state : 2 | raft[1] heartbeat timeout
+090330 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[0]
+090330 LOG1 heartbeat | raft[1] send appendentry / heartbeat to raft[2]
+091790 LOG1 Term 6 state : 2 | raft[2] heartbeat timeout
+091791 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[0]
+091791 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[1]
+091793 LOG1 term : 2 | raft[1] accept the heartbeat from raft[2]
+091793 LOG1 term : 2 | raft[1] start follower convert
+091793 LOG1 Term 2 | raft[1] convert from 2 to 0
+091793 LOG1 term : 6 | raft[0] accept the heartbeat from raft[2]
+091794 LOG1 raft[0] presisiter term6 votefor2 loglen0
+091793 LOG1 raft[1] presisiter term6 votefor-1 loglen0
+094792 LOG1 Term 6 state : 2 | raft[2] heartbeat timeout
+094793 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[0]
+094793 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[1]
+094795 LOG1 term : 6 | raft[1] accept the heartbeat from raft[2]
+094795 LOG1 raft[1] presisiter term6 votefor-1 loglen0
+094795 LOG1 term : 6 | raft[0] accept the heartbeat from raft[2]
+094796 LOG1 raft[0] presisiter term6 votefor2 loglen0
+  ... Passed --   5.9  3   66   12660    0
+Test (2A): multiple elections ...
+097794 LOG1 Term 6 state : 2 | raft[2] heartbeat timeout
+100817 LOG1 state 0 Term 0 | raft[0] election timeout
+100817 LOG1 Term 0 | raft[0] convert from 0 to 1
+100823 LOG1 raft[0] presisiter term1 votefor0 loglen0
+100823 LOG1  term : 1 | raft[0][state : 1] start a election 
+100823 LOG1 vote for self raft[0]
+100823 LOG1 raft[0] sent requestvote to raft[6]
+100823 LOG1 raft[0] sent requestvote to raft[3]
+100825 LOG1 term : 0 | raft[6] accept the requestvote from raft[0]
+100825 LOG1 term : 1 | raft[6] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+100825 LOG1 raft[6] presisiter term1 votefor0 loglen0
+100825 LOG1 term : 0 | raft[3] accept the requestvote from raft[0]
+100825 LOG1 term : 1 | raft[3] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+100826 LOG1 raft[3] presisiter term1 votefor0 loglen0
+100826 LOG1 raft[0] sent requestvote to raft[4]
+100827 LOG1 term : 0 | raft[4] accept the requestvote from raft[0]
+100827 LOG1 term : 1 | raft[4] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+100827 LOG1 raft[4] presisiter term1 votefor0 loglen0
+100827 LOG1 raft[0] sent requestvote to raft[5]
+100828 LOG1 raft[0] sent requestvote to raft[1]
+100828 LOG1 term : 0 | raft[1] accept the requestvote from raft[0]
+100828 LOG1 term : 1 | raft[1] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+100829 LOG1 raft[1] presisiter term1 votefor0 loglen0
+100829 LOG1 term : 0 | raft[5] accept the requestvote from raft[0]
+100829 LOG1 term : 1 | raft[5] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+100829 LOG1 Term 1 | raft[0] convert from 1 to 2
+100829 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+100829 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+100829 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[3]
+100829 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[4]
+100829 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[5]
+100829 LOG1 raft[5] presisiter term1 votefor0 loglen0
+100830 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[6]
+100830 LOG1 term : 1 | raft[6] accept the heartbeat from raft[0]
+100831 LOG1 raft[6] presisiter term1 votefor0 loglen0
+100831 LOG1 term : 1 | raft[3] accept the heartbeat from raft[0]
+100832 LOG1 raft[3] presisiter term1 votefor0 loglen0
+100832 LOG1 term : 1 | raft[4] accept the heartbeat from raft[0]
+100832 LOG1 raft[4] presisiter term1 votefor0 loglen0
+100833 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+100834 LOG1 raft[1] presisiter term1 votefor0 loglen0
+100834 LOG1 term : 1 | raft[5] accept the heartbeat from raft[0]
+100834 LOG1 raft[5] presisiter term1 votefor0 loglen0
+100835 LOG1 term : 0 | raft[2] accept the heartbeat from raft[0]
+100835 LOG1 term : 0 | raft[2] start follower convert
+100835 LOG1 raft[0] sent requestvote to raft[2]
+100835 LOG1 raft[2] presisiter term1 votefor-1 loglen0
+100836 LOG1 term : 1 | raft[2] accept the requestvote from raft[0]
+100836 LOG1 term : 1 | raft[2] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+100836 LOG1 raft[2] presisiter term1 votefor0 loglen0
+101507 LOG1 state 0 Term 6 | raft[0] election timeout
+101507 LOG1 Term 6 | raft[0] convert from 0 to 1
+103831 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+103831 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+103831 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+103832 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[3]
+103832 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[4]
+103832 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[5]
+103832 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[6]
+103833 LOG1 term : 1 | raft[1] accept the heartbeat from raft[0]
+103834 LOG1 term : 1 | raft[6] accept the heartbeat from raft[0]
+103834 LOG1 raft[1] presisiter term1 votefor0 loglen0
+103834 LOG1 raft[6] presisiter term1 votefor0 loglen0
+103836 LOG1 term : 1 | raft[3] accept the heartbeat from raft[0]
+103836 LOG1 raft[3] presisiter term1 votefor0 loglen0
+103836 LOG1 term : 1 | raft[4] accept the heartbeat from raft[0]
+103836 LOG1 raft[4] presisiter term1 votefor0 loglen0
+103837 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+103838 LOG1 raft[2] presisiter term1 votefor0 loglen0
+103838 LOG1 term : 1 | raft[5] accept the heartbeat from raft[0]
+103838 LOG1 raft[5] presisiter term1 votefor0 loglen0
+103996 LOG1 state 0 Term 6 | raft[1] election timeout
+103996 LOG1 Term 6 | raft[1] convert from 0 to 1
+106833 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+106834 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+106834 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+106834 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[3]
+106834 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[4]
+106834 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[5]
+106834 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[6]
+106836 LOG1 term : 1 | raft[6] accept the heartbeat from raft[0]
+106837 LOG1 raft[6] presisiter term1 votefor0 loglen0
+106837 LOG1 term : 1 | raft[3] accept the heartbeat from raft[0]
+106839 LOG1 term : 1 | raft[2] accept the heartbeat from raft[0]
+106840 LOG1 raft[2] presisiter term1 votefor0 loglen0
+106841 LOG1 raft[3] presisiter term1 votefor0 loglen0
+109417 LOG1 state 0 Term 1 | raft[4] election timeout
+109418 LOG1 Term 1 | raft[4] convert from 0 to 1
+109419 LOG1 raft[4] presisiter term2 votefor4 loglen0
+109419 LOG1  term : 2 | raft[4][state : 1] start a election 
+109419 LOG1 vote for self raft[4]
+109419 LOG1 raft[4] sent requestvote to raft[6]
+109419 LOG1 raft[4] sent requestvote to raft[2]
+109419 LOG1 raft[4] sent requestvote to raft[3]
+109420 LOG1 raft[4] sent requestvote to raft[0]
+109420 LOG1 raft[4] sent requestvote to raft[5]
+109420 LOG1 raft[4] sent requestvote to raft[1]
+109836 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+109836 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+109836 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+109836 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[3]
+109836 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[4]
+109836 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[5]
+109836 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[6]
+112837 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+112838 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+112838 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+112838 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[3]
+112838 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[4]
+112838 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[5]
+112838 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[6]
+113199 LOG1 state 0 Term 1 | raft[5] election timeout
+113200 LOG1 Term 1 | raft[5] convert from 0 to 1
+113200 LOG1 raft[5] presisiter term2 votefor5 loglen0
+113201 LOG1  term : 2 | raft[5][state : 1] start a election 
+113201 LOG1 vote for self raft[5]
+113201 LOG1 raft[5] sent requestvote to raft[6]
+113201 LOG1 raft[5] sent requestvote to raft[1]
+113203 LOG1 term : 1 | raft[6] accept the requestvote from raft[5]
+113203 LOG1 term : 2 | raft[6] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+113203 LOG1 raft[5] sent requestvote to raft[0]
+113203 LOG1 raft[6] presisiter term2 votefor5 loglen0
+113203 LOG1 raft[5] sent requestvote to raft[3]
+113204 LOG1 raft[5] sent requestvote to raft[2]
+113204 LOG1 raft[5] sent requestvote to raft[4]
+113203 LOG1 term : 1 | raft[1] accept the requestvote from raft[5]
+113204 LOG1 term : 2 | raft[1] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+113205 LOG1 raft[1] presisiter term2 votefor5 loglen0
+113205 LOG1 term : 1 | raft[2] accept the requestvote from raft[5]
+113205 LOG1 term : 2 | raft[2] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+113206 LOG1 raft[2] presisiter term2 votefor5 loglen0
+113206 LOG1 Term 2 | raft[5] convert from 1 to 2
+113206 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[0]
+113206 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[1]
+113206 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[2]
+113206 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[3]
+113206 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[4]
+113206 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[6]
+113207 LOG1 term : 2 | raft[6] accept the heartbeat from raft[5]
+113208 LOG1 raft[6] presisiter term2 votefor5 loglen0
+113208 LOG1 term : 2 | raft[2] accept the heartbeat from raft[5]
+113208 LOG1 raft[2] presisiter term2 votefor5 loglen0
+113211 LOG1 term : 2 | raft[1] accept the heartbeat from raft[5]
+113211 LOG1 raft[1] presisiter term2 votefor5 loglen0
+113782 LOG1 state 0 Term 1 | raft[3] election timeout
+113782 LOG1 Term 1 | raft[3] convert from 0 to 1
+113783 LOG1 raft[3] presisiter term2 votefor3 loglen0
+113783 LOG1  term : 2 | raft[3][state : 1] start a election 
+113784 LOG1 vote for self raft[3]
+113784 LOG1 raft[3] sent requestvote to raft[6]
+113784 LOG1 raft[3] sent requestvote to raft[4]
+113784 LOG1 raft[3] sent requestvote to raft[2]
+113784 LOG1 raft[3] sent requestvote to raft[5]
+113785 LOG1 raft[3] sent requestvote to raft[0]
+113785 LOG1 raft[3] sent requestvote to raft[1]
+115839 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+115840 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+115840 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+115840 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[3]
+115840 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[4]
+115840 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[5]
+115840 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[6]
+116208 LOG1 Term 2 state : 2 | raft[5] heartbeat timeout
+116208 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[0]
+116208 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[1]
+116208 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[2]
+116208 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[3]
+116208 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[4]
+116209 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[6]
+116259 LOG1 state 1 Term 2 | raft[4] election timeout
+116260 LOG1 raft[4] presisiter term3 votefor4 loglen0
+116260 LOG1  term : 3 | raft[4][state : 1] start a election 
+116260 LOG1 vote for self raft[4]
+116260 LOG1 raft[4] sent requestvote to raft[6]
+116261 LOG1 raft[4] sent requestvote to raft[2]
+116262 LOG1 term : 2 | raft[6] accept the requestvote from raft[4]
+116262 LOG1 term : 3 | raft[6] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+116262 LOG1 raft[6] presisiter term3 votefor4 loglen0
+116263 LOG1 term : 2 | raft[2] accept the requestvote from raft[4]
+116263 LOG1 term : 3 | raft[2] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+116263 LOG1 raft[4] sent requestvote to raft[3]
+116263 LOG1 raft[2] presisiter term3 votefor4 loglen0
+116264 LOG1 term : 2 | raft[3] accept the requestvote from raft[4]
+116264 LOG1 Term 2 | raft[3] convert from 1 to 0
+116264 LOG1 raft[4] sent requestvote to raft[0]
+116264 LOG1 raft[4] sent requestvote to raft[5]
+116264 LOG1 raft[4] sent requestvote to raft[1]
+116264 LOG1 term : 3 | raft[3] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+116265 LOG1 raft[3] presisiter term3 votefor4 loglen0
+116265 LOG1 term : 2 | raft[1] accept the requestvote from raft[4]
+116265 LOG1 term : 3 | raft[1] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+116266 LOG1 raft[1] presisiter term3 votefor4 loglen0
+116266 LOG1 Term 3 | raft[4] convert from 1 to 2
+116266 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[0]
+116266 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[1]
+116266 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[2]
+116266 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[3]
+116266 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[5]
+116266 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[6]
+116267 LOG1 term : 3 | raft[6] accept the heartbeat from raft[4]
+116267 LOG1 term : 3 | raft[2] accept the heartbeat from raft[4]
+116267 LOG1 raft[6] presisiter term3 votefor4 loglen0
+116268 LOG1 raft[2] presisiter term3 votefor4 loglen0
+116269 LOG1 term : 3 | raft[3] accept the heartbeat from raft[4]
+116270 LOG1 raft[3] presisiter term3 votefor4 loglen0
+116270 LOG1 term : 3 | raft[1] accept the heartbeat from raft[4]
+116270 LOG1 raft[1] presisiter term3 votefor4 loglen0
+118841 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+118842 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+118842 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+118842 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[3]
+118842 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[4]
+118842 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[5]
+118842 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[6]
+119210 LOG1 Term 2 state : 2 | raft[5] heartbeat timeout
+119210 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[0]
+119210 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[1]
+119210 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[2]
+119210 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[3]
+119210 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[4]
+119210 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[6]
+119267 LOG1 Term 3 state : 2 | raft[4] heartbeat timeout
+119267 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[0]
+119268 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[1]
+119268 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[2]
+119268 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[3]
+119268 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[5]
+119268 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[6]
+119270 LOG1 term : 3 | raft[6] accept the heartbeat from raft[4]
+119270 LOG1 raft[6] presisiter term3 votefor4 loglen0
+119273 LOG1 term : 3 | raft[1] accept the heartbeat from raft[4]
+119273 LOG1 raft[1] presisiter term3 votefor4 loglen0
+119275 LOG1 term : 3 | raft[2] accept the heartbeat from raft[4]
+119275 LOG1 raft[2] presisiter term3 votefor4 loglen0
+119276 LOG1 term : 3 | raft[3] accept the heartbeat from raft[4]
+119277 LOG1 raft[3] presisiter term3 votefor4 loglen0
+121843 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+121844 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+121844 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+121844 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[3]
+121844 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[4]
+121844 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[5]
+121844 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[6]
+122212 LOG1 Term 2 state : 2 | raft[5] heartbeat timeout
+122212 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[0]
+122212 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[1]
+122213 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[2]
+122213 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[3]
+122213 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[4]
+122213 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[6]
+122226 LOG1 term : 3 | raft[3] accept the heartbeat from raft[5]
+122227 LOG1 raft[3] presisiter term3 votefor4 loglen0
+122230 LOG1 term : 3 | raft[1] accept the heartbeat from raft[5]
+122230 LOG1 raft[1] presisiter term3 votefor4 loglen0
+122233 LOG1 term : 3 | raft[6] accept the heartbeat from raft[5]
+122233 LOG1 raft[6] presisiter term3 votefor4 loglen0
+122269 LOG1 Term 3 state : 2 | raft[4] heartbeat timeout
+122269 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[0]
+122269 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[1]
+122269 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[2]
+122269 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[3]
+122269 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[5]
+122269 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[6]
+124845 LOG1 Term 1 state : 2 | raft[0] heartbeat timeout
+124846 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+124846 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+124846 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[3]
+124846 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[4]
+124846 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[5]
+124846 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[6]
+124848 LOG1 term : 3 | raft[6] accept the heartbeat from raft[0]
+124848 LOG1 raft[6] presisiter term3 votefor4 loglen0
+124848 LOG1 term : 3 | raft[3] accept the heartbeat from raft[0]
+124848 LOG1 raft[3] presisiter term3 votefor4 loglen0
+124850 LOG1 term : 2 | raft[5] accept the heartbeat from raft[0]
+124850 LOG1 raft[5] presisiter term2 votefor5 loglen0
+124851 LOG1 term : 3 | raft[2] accept the heartbeat from raft[0]
+124851 LOG1 raft[2] presisiter term3 votefor4 loglen0
+125214 LOG1 Term 2 state : 2 | raft[5] heartbeat timeout
+125214 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[0]
+125215 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[1]
+125215 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[2]
+125215 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[3]
+125215 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[4]
+125215 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[6]
+125216 LOG1 term : 3 | raft[6] accept the heartbeat from raft[5]
+125217 LOG1 raft[6] presisiter term3 votefor4 loglen0
+125217 LOG1 term : 3 | raft[2] accept the heartbeat from raft[5]
+125217 LOG1 raft[2] presisiter term3 votefor4 loglen0
+125218 LOG1 term : 3 | raft[3] accept the heartbeat from raft[5]
+125218 LOG1 raft[3] presisiter term3 votefor4 loglen0
+125219 LOG1 term : 1 | raft[0] accept the heartbeat from raft[5]
+125219 LOG1 term : 1 | raft[0] start follower convert
+125219 LOG1 Term 1 | raft[0] convert from 2 to 0
+125219 LOG1 raft[0] presisiter term2 votefor-1 loglen0
+125236 LOG1 state 0 Term 3 | raft[2] election timeout
+125236 LOG1 Term 3 | raft[2] convert from 0 to 1
+125237 LOG1 raft[2] presisiter term4 votefor2 loglen0
+125237 LOG1  term : 4 | raft[2][state : 1] start a election 
+125237 LOG1 vote for self raft[2]
+125237 LOG1 raft[2] sent requestvote to raft[6]
+125239 LOG1 term : 3 | raft[6] accept the requestvote from raft[2]
+125239 LOG1 term : 4 | raft[6] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+125239 LOG1 raft[6] presisiter term4 votefor2 loglen0
+125240 LOG1 raft[2] sent requestvote to raft[0]
+125241 LOG1 term : 2 | raft[0] accept the requestvote from raft[2]
+125241 LOG1 term : 4 | raft[0] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+125241 LOG1 raft[0] presisiter term4 votefor2 loglen0
+125242 LOG1 raft[2] sent requestvote to raft[1]
+125242 LOG1 raft[2] sent requestvote to raft[3]
+125243 LOG1 term : 3 | raft[3] accept the requestvote from raft[2]
+125243 LOG1 term : 4 | raft[3] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+125244 LOG1 raft[3] presisiter term4 votefor2 loglen0
+125245 LOG1 Term 4 | raft[2] convert from 1 to 2
+125245 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[0]
+125245 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[1]
+125245 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[3]
+125245 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[4]
+125245 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[5]
+125245 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[6]
+125246 LOG1 term : 4 | raft[6] accept the heartbeat from raft[2]
+125247 LOG1 raft[6] presisiter term4 votefor2 loglen0
+125248 LOG1 raft[2] sent requestvote to raft[4]
+125248 LOG1 raft[2] sent requestvote to raft[5]
+125249 LOG1 term : 2 | raft[5] accept the requestvote from raft[2]
+125249 LOG1 Term 2 | raft[5] convert from 2 to 0
+125249 LOG1 term : 4 | raft[5] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+125250 LOG1 raft[5] presisiter term4 votefor2 loglen0
+125252 LOG1 term : 4 | raft[0] accept the heartbeat from raft[2]
+125252 LOG1 raft[0] presisiter term4 votefor2 loglen0
+125255 LOG1 term : 4 | raft[3] accept the heartbeat from raft[2]
+125255 LOG1 raft[3] presisiter term4 votefor2 loglen0
+125257 LOG1 term : 4 | raft[5] accept the heartbeat from raft[2]
+125258 LOG1 raft[5] presisiter term4 votefor2 loglen0
+125270 LOG1 Term 3 state : 2 | raft[4] heartbeat timeout
+125270 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[0]
+125270 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[1]
+125270 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[2]
+125271 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[3]
+125271 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[5]
+125271 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[6]
+126304 LOG1 state 0 Term 3 | raft[1] election timeout
+126304 LOG1 Term 3 | raft[1] convert from 0 to 1
+126305 LOG1 raft[1] presisiter term4 votefor1 loglen0
+126305 LOG1  term : 4 | raft[1][state : 1] start a election 
+126305 LOG1 vote for self raft[1]
+126305 LOG1 raft[1] sent requestvote to raft[6]
+126306 LOG1 raft[1] sent requestvote to raft[3]
+126306 LOG1 raft[1] sent requestvote to raft[4]
+126306 LOG1 raft[1] sent requestvote to raft[5]
+126306 LOG1 raft[1] sent requestvote to raft[0]
+126306 LOG1 raft[1] sent requestvote to raft[2]
+128246 LOG1 Term 4 state : 2 | raft[2] heartbeat timeout
+128247 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[0]
+128247 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[1]
+128247 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[3]
+128247 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[4]
+128247 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[5]
+128247 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[6]
+128249 LOG1 term : 4 | raft[6] accept the heartbeat from raft[2]
+128249 LOG1 term : 4 | raft[3] accept the heartbeat from raft[2]
+128249 LOG1 raft[3] presisiter term4 votefor2 loglen0
+128250 LOG1 term : 4 | raft[5] accept the heartbeat from raft[2]
+128250 LOG1 raft[5] presisiter term4 votefor2 loglen0
+128249 LOG1 raft[6] presisiter term4 votefor2 loglen0
+128251 LOG1 term : 4 | raft[0] accept the heartbeat from raft[2]
+128251 LOG1 raft[0] presisiter term4 votefor2 loglen0
+128272 LOG1 Term 3 state : 2 | raft[4] heartbeat timeout
+128272 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[0]
+128272 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[1]
+128272 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[2]
+128272 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[3]
+128272 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[5]
+128272 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[6]
+131248 LOG1 Term 4 state : 2 | raft[2] heartbeat timeout
+131248 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[0]
+131249 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[1]
+131249 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[3]
+131249 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[4]
+131249 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[5]
+131249 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[6]
+131273 LOG1 Term 3 state : 2 | raft[4] heartbeat timeout
+131274 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[0]
+131274 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[1]
+131274 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[2]
+131274 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[3]
+131274 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[5]
+131274 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[6]
+133901 LOG1 state 0 Term 4 | raft[5] election timeout
+133902 LOG1 Term 4 | raft[5] convert from 0 to 1
+133903 LOG1 raft[5] presisiter term5 votefor5 loglen0
+133903 LOG1  term : 5 | raft[5][state : 1] start a election 
+133903 LOG1 vote for self raft[5]
+133903 LOG1 raft[5] sent requestvote to raft[6]
+133903 LOG1 raft[5] sent requestvote to raft[1]
+133904 LOG1 term : 4 | raft[6] accept the requestvote from raft[5]
+133905 LOG1 term : 5 | raft[6] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+133905 LOG1 raft[6] presisiter term5 votefor5 loglen0
+133905 LOG1 term : 4 | raft[1] accept the requestvote from raft[5]
+133905 LOG1 Term 4 | raft[1] convert from 1 to 0
+133905 LOG1 raft[5] sent requestvote to raft[2]
+133905 LOG1 term : 5 | raft[1] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+133906 LOG1 raft[5] sent requestvote to raft[3]
+133906 LOG1 raft[1] presisiter term5 votefor5 loglen0
+133907 LOG1 term : 4 | raft[3] accept the requestvote from raft[5]
+133907 LOG1 raft[5] sent requestvote to raft[0]
+133907 LOG1 raft[5] sent requestvote to raft[4]
+133907 LOG1 term : 5 | raft[3] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+133907 LOG1 raft[3] presisiter term5 votefor5 loglen0
+133907 LOG1 term : 4 | raft[0] accept the requestvote from raft[5]
+133907 LOG1 term : 5 | raft[0] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+133908 LOG1 raft[0] presisiter term5 votefor5 loglen0
+133908 LOG1 Term 5 | raft[5] convert from 1 to 2
+133908 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[0]
+133908 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[1]
+133908 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[2]
+133908 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[3]
+133908 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[4]
+133908 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[6]
+133909 LOG1 term : 5 | raft[6] accept the heartbeat from raft[5]
+133909 LOG1 raft[6] presisiter term5 votefor5 loglen0
+133909 LOG1 term : 5 | raft[0] accept the heartbeat from raft[5]
+133910 LOG1 raft[0] presisiter term5 votefor5 loglen0
+133910 LOG1 term : 5 | raft[3] accept the heartbeat from raft[5]
+133910 LOG1 raft[3] presisiter term5 votefor5 loglen0
+133911 LOG1 term : 5 | raft[1] accept the heartbeat from raft[5]
+133911 LOG1 raft[1] presisiter term5 votefor5 loglen0
+134250 LOG1 Term 4 state : 2 | raft[2] heartbeat timeout
+134251 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[0]
+134251 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[1]
+134251 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[3]
+134251 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[4]
+134251 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[5]
+134251 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[6]
+134275 LOG1 Term 3 state : 2 | raft[4] heartbeat timeout
+134275 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[0]
+134275 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[1]
+134275 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[2]
+134275 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[3]
+134275 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[5]
+134275 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[6]
+136909 LOG1 Term 5 state : 2 | raft[5] heartbeat timeout
+136910 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[0]
+136910 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[1]
+136910 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[2]
+136910 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[3]
+136910 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[4]
+136910 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[6]
+136912 LOG1 term : 5 | raft[6] accept the heartbeat from raft[5]
+136913 LOG1 raft[6] presisiter term5 votefor5 loglen0
+136913 LOG1 term : 5 | raft[0] accept the heartbeat from raft[5]
+136913 LOG1 raft[0] presisiter term5 votefor5 loglen0
+136914 LOG1 term : 5 | raft[3] accept the heartbeat from raft[5]
+136915 LOG1 raft[3] presisiter term5 votefor5 loglen0
+136915 LOG1 term : 5 | raft[1] accept the heartbeat from raft[5]
+136915 LOG1 raft[1] presisiter term5 votefor5 loglen0
+137252 LOG1 Term 4 state : 2 | raft[2] heartbeat timeout
+137252 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[0]
+137253 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[1]
+137253 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[3]
+137253 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[4]
+137253 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[5]
+137253 LOG1 heartbeat | raft[2] send appendentry / heartbeat to raft[6]
+137277 LOG1 Term 3 state : 2 | raft[4] heartbeat timeout
+137277 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[0]
+137277 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[1]
+137277 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[2]
+137277 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[3]
+137277 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[5]
+137277 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[6]
+139912 LOG1 Term 5 state : 2 | raft[5] heartbeat timeout
+139912 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[0]
+139912 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[1]
+139912 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[2]
+139912 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[3]
+139912 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[4]
+139913 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[6]
+139915 LOG1 term : 5 | raft[6] accept the heartbeat from raft[5]
+139915 LOG1 term : 4 | raft[2] accept the heartbeat from raft[5]
+139915 LOG1 term : 4 | raft[2] start follower convert
+139915 LOG1 Term 4 | raft[2] convert from 2 to 0
+139916 LOG1 raft[2] presisiter term5 votefor-1 loglen0
+139915 LOG1 raft[6] presisiter term5 votefor5 loglen0
+139917 LOG1 term : 5 | raft[1] accept the heartbeat from raft[5]
+139917 LOG1 raft[1] presisiter term5 votefor5 loglen0
+140278 LOG1 Term 3 state : 2 | raft[4] heartbeat timeout
+140279 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[0]
+140279 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[1]
+140279 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[2]
+140279 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[3]
+140279 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[5]
+140279 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[6]
+142914 LOG1 Term 5 state : 2 | raft[5] heartbeat timeout
+142914 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[0]
+142914 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[1]
+142914 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[2]
+142914 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[3]
+142915 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[4]
+142915 LOG1 heartbeat | raft[5] send appendentry / heartbeat to raft[6]
+142917 LOG1 term : 5 | raft[6] accept the heartbeat from raft[5]
+142917 LOG1 term : 5 | raft[2] accept the heartbeat from raft[5]
+142917 LOG1 raft[2] presisiter term5 votefor-1 loglen0
+142917 LOG1 raft[6] presisiter term5 votefor5 loglen0
+142919 LOG1 term : 5 | raft[1] accept the heartbeat from raft[5]
+142919 LOG1 raft[1] presisiter term5 votefor5 loglen0
+143280 LOG1 Term 3 state : 2 | raft[4] heartbeat timeout
+143281 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[0]
+143281 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[1]
+143281 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[2]
+143281 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[3]
+143281 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[5]
+143281 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[6]
+144595 LOG1 state 0 Term 5 | raft[0] election timeout
+144595 LOG1 Term 5 | raft[0] convert from 0 to 1
+144596 LOG1 raft[0] presisiter term6 votefor0 loglen0
+144596 LOG1  term : 6 | raft[0][state : 1] start a election 
+144596 LOG1 vote for self raft[0]
+144596 LOG1 raft[0] sent requestvote to raft[6]
+144597 LOG1 raft[0] sent requestvote to raft[1]
+144597 LOG1 raft[0] sent requestvote to raft[4]
+144597 LOG1 raft[0] sent requestvote to raft[3]
+144598 LOG1 term : 3 | raft[4] accept the requestvote from raft[0]
+144598 LOG1 Term 3 | raft[4] convert from 2 to 0
+144598 LOG1 term : 6 | raft[4] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+144598 LOG1 raft[4] presisiter term6 votefor0 loglen0
+144598 LOG1 raft[0] sent requestvote to raft[2]
+144599 LOG1 raft[0] sent requestvote to raft[5]
+144599 LOG1 term : 5 | raft[2] accept the requestvote from raft[0]
+144599 LOG1 term : 6 | raft[2] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+144600 LOG1 raft[2] presisiter term6 votefor0 loglen0
+144600 LOG1 term : 5 | raft[5] accept the requestvote from raft[0]
+144600 LOG1 Term 5 | raft[5] convert from 2 to 0
+144600 LOG1 term : 6 | raft[5] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+144598 LOG1 term : 5 | raft[3] accept the requestvote from raft[0]
+144600 LOG1 term : 6 | raft[3] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+144600 LOG1 raft[5] presisiter term6 votefor0 loglen0
+144600 LOG1 raft[3] presisiter term6 votefor0 loglen0
+144601 LOG1 Term 6 | raft[0] convert from 1 to 2
+144601 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+144601 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+144601 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[3]
+144601 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[4]
+144601 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[5]
+144601 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[6]
+144602 LOG1 term : 6 | raft[3] accept the heartbeat from raft[0]
+144602 LOG1 raft[3] presisiter term6 votefor0 loglen0
+144603 LOG1 term : 6 | raft[2] accept the heartbeat from raft[0]
+144603 LOG1 term : 6 | raft[4] accept the heartbeat from raft[0]
+144604 LOG1 raft[4] presisiter term6 votefor0 loglen0
+144604 LOG1 raft[2] presisiter term6 votefor0 loglen0
+144606 LOG1 term : 6 | raft[5] accept the heartbeat from raft[0]
+144606 LOG1 raft[5] presisiter term6 votefor0 loglen0
+147602 LOG1 Term 6 state : 2 | raft[0] heartbeat timeout
+147602 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+147603 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+147603 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[3]
+147603 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[4]
+147603 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[5]
+147603 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[6]
+147605 LOG1 term : 6 | raft[2] accept the heartbeat from raft[0]
+147605 LOG1 term : 6 | raft[4] accept the heartbeat from raft[0]
+147605 LOG1 raft[2] presisiter term6 votefor0 loglen0
+147606 LOG1 raft[4] presisiter term6 votefor0 loglen0
+147607 LOG1 term : 6 | raft[3] accept the heartbeat from raft[0]
+147607 LOG1 term : 6 | raft[5] accept the heartbeat from raft[0]
+147607 LOG1 raft[3] presisiter term6 votefor0 loglen0
+147607 LOG1 raft[5] presisiter term6 votefor0 loglen0
+148130 LOG1 state 0 Term 5 | raft[1] election timeout
+148131 LOG1 Term 5 | raft[1] convert from 0 to 1
+148131 LOG1 raft[1] presisiter term6 votefor1 loglen0
+148131 LOG1  term : 6 | raft[1][state : 1] start a election 
+148131 LOG1 vote for self raft[1]
+148131 LOG1 raft[1] sent requestvote to raft[6]
+148132 LOG1 raft[1] sent requestvote to raft[0]
+148132 LOG1 raft[1] sent requestvote to raft[2]
+148132 LOG1 raft[1] sent requestvote to raft[3]
+148133 LOG1 raft[1] sent requestvote to raft[4]
+148133 LOG1 raft[1] sent requestvote to raft[5]
+150604 LOG1 Term 6 state : 2 | raft[0] heartbeat timeout
+150604 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+150605 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+150605 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[3]
+150605 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[4]
+150605 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[5]
+150605 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[6]
+150607 LOG1 term : 6 | raft[1] accept the heartbeat from raft[0]
+150607 LOG1 raft[1] presisiter term6 votefor1 loglen0
+150607 LOG1 term : 6 | raft[3] accept the heartbeat from raft[0]
+150608 LOG1 term : 6 | raft[2] accept the heartbeat from raft[0]
+150609 LOG1 raft[3] presisiter term6 votefor0 loglen0
+150609 LOG1 raft[2] presisiter term6 votefor0 loglen0
+151058 LOG1 state 0 Term 5 | raft[6] election timeout
+151059 LOG1 Term 5 | raft[6] convert from 0 to 1
+151059 LOG1 raft[6] presisiter term6 votefor6 loglen0
+151059 LOG1  term : 6 | raft[6][state : 1] start a election 
+151059 LOG1 vote for self raft[6]
+151060 LOG1 raft[6] sent requestvote to raft[5]
+151060 LOG1 raft[6] sent requestvote to raft[0]
+151060 LOG1 raft[6] sent requestvote to raft[1]
+151060 LOG1 raft[6] sent requestvote to raft[2]
+151061 LOG1 raft[6] sent requestvote to raft[3]
+151061 LOG1 raft[6] sent requestvote to raft[4]
+152648 LOG1 state 0 Term 6 | raft[5] election timeout
+152649 LOG1 Term 6 | raft[5] convert from 0 to 1
+152649 LOG1 raft[5] presisiter term7 votefor5 loglen0
+152649 LOG1  term : 7 | raft[5][state : 1] start a election 
+152649 LOG1 vote for self raft[5]
+152650 LOG1 raft[5] sent requestvote to raft[6]
+152650 LOG1 raft[5] sent requestvote to raft[2]
+152650 LOG1 raft[5] sent requestvote to raft[3]
+152650 LOG1 raft[5] sent requestvote to raft[4]
+152651 LOG1 raft[5] sent requestvote to raft[0]
+152651 LOG1 raft[5] sent requestvote to raft[1]
+153606 LOG1 Term 6 state : 2 | raft[0] heartbeat timeout
+153607 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[1]
+153607 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[2]
+153607 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[3]
+153607 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[4]
+153607 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[5]
+153607 LOG1 heartbeat | raft[0] send appendentry / heartbeat to raft[6]
+153609 LOG1 term : 6 | raft[1] accept the heartbeat from raft[0]
+153609 LOG1 raft[1] presisiter term6 votefor1 loglen0
+153611 LOG1 term : 6 | raft[2] accept the heartbeat from raft[0]
+153611 LOG1 raft[2] presisiter term6 votefor0 loglen0
+153612 LOG1 term : 6 | raft[3] accept the heartbeat from raft[0]
+153613 LOG1 raft[3] presisiter term6 votefor0 loglen0
+154636 LOG1 state 0 Term 6 | raft[4] election timeout
+154637 LOG1 Term 6 | raft[4] convert from 0 to 1
+154637 LOG1 raft[4] presisiter term7 votefor4 loglen0
+154638 LOG1  term : 7 | raft[4][state : 1] start a election 
+154638 LOG1 vote for self raft[4]
+154638 LOG1 raft[4] sent requestvote to raft[6]
+154638 LOG1 raft[4] sent requestvote to raft[2]
+154639 LOG1 term : 6 | raft[6] accept the requestvote from raft[4]
+154639 LOG1 Term 6 | raft[6] convert from 1 to 0
+154639 LOG1 term : 7 | raft[6] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+154639 LOG1 term : 6 | raft[2] accept the requestvote from raft[4]
+154640 LOG1 term : 7 | raft[2] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+154640 LOG1 raft[4] sent requestvote to raft[3]
+154640 LOG1 raft[2] presisiter term7 votefor4 loglen0
+154640 LOG1 term : 6 | raft[3] accept the requestvote from raft[4]
+154640 LOG1 raft[4] sent requestvote to raft[0]
+154640 LOG1 raft[4] sent requestvote to raft[5]
+154641 LOG1 term : 6 | raft[0] accept the requestvote from raft[4]
+154641 LOG1 Term 6 | raft[0] convert from 2 to 0
+154641 LOG1 term : 7 | raft[5] accept the requestvote from raft[4]
+154641 LOG1 term : 7 | raft[0] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+154641 LOG1 raft[5] presisiter term7 votefor5 loglen0
+154642 LOG1 raft[0] presisiter term7 votefor4 loglen0
+154640 LOG1 raft[6] presisiter term7 votefor4 loglen0
+154640 LOG1 term : 7 | raft[3] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+154642 LOG1 raft[3] presisiter term7 votefor4 loglen0
+154643 LOG1 Term 7 | raft[4] convert from 1 to 2
+154643 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[0]
+154643 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[1]
+154643 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[2]
+154643 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[3]
+154643 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[5]
+154643 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[6]
+154643 LOG1 raft[4] sent requestvote to raft[1]
+154643 LOG1 term : 6 | raft[1] accept the requestvote from raft[4]
+154643 LOG1 Term 6 | raft[1] convert from 1 to 0
+154644 LOG1 term : 7 | raft[1] (lastlogterm 0 lastlogindex 0)accept the requestvote from raft[8] (lastlogterm 0 lastlogindex 0) 
+154644 LOG1 term : 7 | raft[2] accept the heartbeat from raft[4]
+154644 LOG1 raft[1] presisiter term7 votefor4 loglen0
+154644 LOG1 raft[2] presisiter term7 votefor4 loglen0
+154645 LOG1 term : 7 | raft[3] accept the heartbeat from raft[4]
+154645 LOG1 term : 7 | raft[0] accept the heartbeat from raft[4]
+154646 LOG1 raft[3] presisiter term7 votefor4 loglen0
+154646 LOG1 raft[0] presisiter term7 votefor4 loglen0
+154647 LOG1 term : 7 | raft[6] accept the heartbeat from raft[4]
+154647 LOG1 raft[6] presisiter term7 votefor4 loglen0
+154647 LOG1 term : 7 | raft[5] accept the heartbeat from raft[4]
+154648 LOG1 raft[5] presisiter term7 votefor5 loglen0
+154648 LOG1 term : 7 | raft[1] accept the heartbeat from raft[4]
+154648 LOG1 raft[1] presisiter term7 votefor4 loglen0
+157644 LOG1 Term 7 state : 2 | raft[4] heartbeat timeout
+157644 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[0]
+157645 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[1]
+157645 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[2]
+157645 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[3]
+157645 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[5]
+157645 LOG1 heartbeat | raft[4] send appendentry / heartbeat to raft[6]
+157646 LOG1 term : 7 | raft[6] accept the heartbeat from raft[4]
+157647 LOG1 raft[6] presisiter term7 votefor4 loglen0
+157648 LOG1 term : 7 | raft[0] accept the heartbeat from raft[4]
+157648 LOG1 raft[0] presisiter term7 votefor4 loglen0
+157649 LOG1 term : 7 | raft[3] accept the heartbeat from raft[4]
+157649 LOG1 raft[3] presisiter term7 votefor4 loglen0
+157650 LOG1 term : 7 | raft[1] accept the heartbeat from raft[4]
+157650 LOG1 raft[1] presisiter term7 votefor4 loglen0
+157650 LOG1 term : 7 | raft[5] accept the heartbeat from raft[4]
+157647 LOG1 term : 7 | raft[2] accept the heartbeat from raft[4]
+157651 LOG1 raft[2] presisiter term7 votefor4 loglen0
+157651 LOG1 raft[5] presisiter term7 votefor5 loglen0
+  ... Passed --   6.5  7  312   60999    0
+PASS
+ok  	6.5840/raft	15.996s
